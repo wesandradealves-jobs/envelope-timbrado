@@ -1,0 +1,35 @@
+.header
+    background-color: $defaultblue
+    color: white
+    +rem('font-size', 15px)
+    >.container
+        align-items: stretch
+        @extend .flex
+        font-size: inherit
+        flex-flow: row wrap 
+        justify-content: space-between
+        max-width: 100%
+        >*
+            flex: 1
+            align-items: center
+            &:not(:last-child)
+                border-right: 1px solid rgba(242,242,242,0.35)
+            @extend .flex
+            flex-flow: column wrap 
+            justify-content: center 
+            &.logo
+                align-items: flex-start
+                flex: 0 0 auto 
+                padding-top: 15px
+                padding-bottom: 15px
+                width: 478px
+            &.envelope-anchor
+                flex: 0 0 auto
+                width: 171px
+                >a 
+                    >i 
+                        margin-left: 8px
+            .icon 
+                color: $lightblue
+                display: inline-block
+                vertical-align: middle

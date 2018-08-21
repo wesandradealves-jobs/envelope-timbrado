@@ -1,0 +1,35 @@
+.search-form
+    padding: 8px
+    >.search-form-inner 
+        align-items: center
+        background-color: white
+        +border(2px) 
+        @extend .flex
+        flex-flow: row wrap 
+        height: 100%
+        justify-content: space-between
+        padding: 0 20px
+        width: 100%
+        > span
+            flex: 1 
+            &:last-child
+                flex: 0 0 auto 
+                width: 17px
+            .icon
+                +rem('font-size', 17px)
+            input 
+                outline: 0px
+                width: 100%
+            button,input 
+                background-color: transparent 
+                border: 0
+                border-radius: 0
+                color: $lightblue
+                &[placeholder]
+                    color: $lightblue
+                &::-moz-placeholder
+                    color: $lightblue
+                &::-webkit-input-placeholder
+                    color: $lightblue
+                &:-ms-input-placeholder 
+                    color: $lightblue
