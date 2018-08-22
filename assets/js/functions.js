@@ -43,7 +43,7 @@ $(document).ready(function () {
         paginationSpeed : 400,
         singleItem: true,
         loop: true,
-        navigationText: ["<i class='owl-prev-arrow fas fa-angle-left'></i>","<i class='owl-next-arrow fas fa-angle-right'></i>"]
+        navigationText: ["<i class='owl-prev-arrow'><img src='assets/imgs/thin-arrow.png'/></i>","<i class='owl-next-arrow'><img src='assets/imgs/thin-arrow.png'/></i>"]
     });
     $(".webdoor").find(".owl-pagination").appendTo($(".webdoor .owl-wrapper-outer"));
     $(".webdoor").find(".owl-buttons").appendTo($(".webdoor .owl-wrapper-outer"));
