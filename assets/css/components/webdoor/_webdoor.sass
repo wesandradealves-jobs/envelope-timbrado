@@ -1,25 +1,27 @@
 .webdoor
     &:hover
-        .owl-buttons
+        .owl-nav
             [class*="owl-"]
                 opacity: 1
-    .owl-pagination,
-    .owl-buttons
+    .owl-nav,
+    .owl-dots
         align-items: center 
         @extend .flex
-        font-family: 'HelveticaNeue,Helvetica,Arial,sans-serif'
         font-weight: 400
         flex-flow: row wrap 
         left: 0
         position: absolute 
         width: 100%
-    .owl-buttons
+        button 
+            outline: 0px!important
+    .owl-nav
         justify-content: space-between
         padding: 0 45px
         top: calc(50% - 70px/2)
         +mq(436px, max)
             display: none
         [class*='owl-']
+            background-color: transparent!important
             color: white 
             display: inline
             opacity: 0
@@ -36,16 +38,17 @@
                 transform: rotate(180deg)
             +mq(436px, max)
                 +rem('font-size', 45px)
-    .owl-pagination
+    .owl-dots
         bottom: 40px
         justify-content: center
-        .owl-page
-            margin: 0 10px
+        .owl-dot
+            margin: 0
             &.active
                 >span 
-                    background-color: white
+                    background-color: transparent
             >span 
                 border: 2px white solid
+                background-color: white
                 +border(999px)
                 display: block
                 height: 9px
