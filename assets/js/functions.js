@@ -38,16 +38,18 @@ $(window).on("resize", function () {
 });
 $(document).ready(function () {
     $('.owl-slideshow').owlCarousel({
-        navigation : true, // Show next and prev buttons
-        slideSpeed : 300,
-        paginationSpeed : 400,
-        singleItem: true,
-        loop: true,
-        navigationText: ["<i class='owl-prev-arrow'><img src='assets/imgs/thin-arrow.png'/></i>","<i class='owl-next-arrow'><img src='assets/imgs/thin-arrow.png'/></i>"]
+        items: 1,
+        nav: true,
+        dots: true,
+        navText: ["<i class='owl-prev-arrow'><img src='assets/imgs/thin-arrow.png'/></i>","<i class='owl-next-arrow'><img src='assets/imgs/thin-arrow.png'/></i>"]
+        // navigation : true, // Show next and prev buttons
+        // slideSpeed : 300,
+        // paginationSpeed : 400,
+        // singleItem: true,
+        // loop: true,
     });
-    $(".webdoor").find(".owl-pagination").appendTo($(".webdoor .owl-wrapper-outer"));
-    $(".webdoor").find(".owl-buttons").appendTo($(".webdoor .owl-wrapper-outer"));
-    $(".webdoor").find(".owl-controls").remove();
+    $(".webdoor").find(".owl-dots").appendTo($(".webdoor .owl-stage-outer"));
+    $(".webdoor").find(".owl-nav").appendTo($(".webdoor .owl-stage-outer"));
 });
       
       
