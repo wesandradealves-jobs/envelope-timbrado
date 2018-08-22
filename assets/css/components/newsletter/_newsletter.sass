@@ -1,0 +1,89 @@
+.newsletter
+    border-bottom: 1px transparentize(white, 0.9) solid
+    >.container
+        align-items: center 
+        @extend .flex
+        flex-flow: row wrap 
+        justify-content: space-between
+        padding: 55px 0
+        >*
+            flex: 1
+            &.newsletter-label
+                align-items: center
+                @extend .flex
+                flex-flow: row wrap
+                flex: 0 0 auto
+                justify-content: space-between
+                +mq(640px, max)
+                    justify-content: center 
+                    text-align: center 
+                    width: 100%
+                img 
+                    +mq(436px, max)
+                        margin-bottom: 15px
+                    flex: 0 0 auto 
+                    width: 68px
+                p 
+                    color: white 
+                    flex: 1
+                    +mq(640px, max)
+                        flex: 0 0 auto
+                    +rem('font-size', 16px)
+                    padding-left: 15px
+            &.newsletter-inputs
+                align-items: center
+                @extend .flex
+                flex-flow: row wrap 
+                flex: 1
+                +mq(640px, max)
+                    flex: 0 0 auto 
+                    width: 100%
+                justify-content: space-between
+                padding: 0 14px 0 28px
+                +mq(860px, max)
+                    padding: 0 0 0 28px
+                    +mq(640px, max)
+                        padding: 28px 0 0 0
+                        +mq(436px, max)
+                            padding: 15px 0 0 0
+                &+*
+                    flex: 0 0 auto
+                    +mq(860px, max)
+                        padding-top: 15px
+                        width: 100%
+                    .btn
+                        width: 165px
+                        +mq(860px, max)
+                            width: 100%
+                >span 
+                    flex: 1
+                    &:first-child
+                        padding-right: 3.5px
+                        +mq(436px, max)
+                            padding-right: 0
+                    &:last-child
+                        padding-left: 3.5px
+                        padding-top: 15px
+                        +mq(436px, max)
+                            padding-left: 0
+                    +mq(436px, max)
+                        flex: 0 0 auto 
+                        width: 100% 
+                    >input 
+                        border: 1px transparentize(white, 0.9) solid
+                        background-color: transparent 
+                        +border(8px)
+                        +rem('font-size', 14px)
+                        outline: 0px
+                        padding: 15px 25px
+                        width: 100% 
+                        &:focus
+                            border-color: $lightblue
+                        &[placeholder]
+                            color: white
+                        &::-moz-placeholder
+                            color: white
+                        &::-webkit-input-placeholder
+                            color: white
+                        &:-ms-input-placeholder 
+                            color: white

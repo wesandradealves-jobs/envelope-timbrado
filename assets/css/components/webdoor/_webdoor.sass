@@ -1,0 +1,78 @@
+.webdoor
+    &:hover
+        .owl-buttons
+            [class*="owl-"]
+                opacity: 1
+    .owl-pagination,
+    .owl-buttons
+        align-items: center 
+        @extend .flex
+        font-family: 'HelveticaNeue,Helvetica,Arial,sans-serif'
+        font-weight: 400
+        flex-flow: row wrap 
+        left: 0
+        position: absolute 
+        width: 100%
+    .owl-buttons
+        justify-content: space-between
+        padding: 0 45px
+        top: calc(50% - 70px/2)
+        +mq(436px, max)
+            display: none
+        [class*='owl-']
+            color: white 
+            display: inline
+            opacity: 0
+            +mq(1280px, max)
+                opacity: 1
+            position: relative
+            +transition(1000ms)
+            +rem('font-size', 70px)
+            +mq(436px, max)
+                +rem('font-size', 45px)
+    .owl-pagination
+        bottom: 40px
+        justify-content: center
+        .owl-page
+            margin: 0 10px
+            &.active
+                >span 
+                    background-color: white
+            >span 
+                border: 2px white solid
+                +border(999px)
+                display: block
+                height: 9px
+                width: 9px 
+    .item 
+        &-inner
+            background-size: cover 
+            background-repeat: no-repeat 
+            background-position: center center 
+            color: white
+            align-items: center 
+            @extend .flex
+            flex-flow: column wrap
+            overflow: hidden
+            justify-content: center 
+            +mq(1430px, max)
+                padding: 0 120px
+                +mq(568px, max)
+                    padding: 0 30px
+                    text-align: center
+            height: 441px
+            .container
+                position: relative
+            .webdoor-title
+                +rem(('font-size' : 55px, 'line-height' : 30px))
+                +mq(436px, max)
+                    +rem(('font-size' : 35px, 'line-height' : 15px))
+                font-weight: 800 
+                &+p 
+                    color: $lightblue
+                    display: block 
+                    +rem('font-size', 35px)
+                    +mq(436px, max)
+                        +rem('font-size', 19px)
+                    font-weight: 300
+                    padding: 15px 0

@@ -1,0 +1,51 @@
+.main-nav
+    flex: 1
+    +mq(1280px, max)
+        order: 2
+        flex: 0 0 auto
+        padding-top: 15px
+        padding-bottom: 15px
+        width: 100%
+    >ul
+        align-items: center 
+        @extend .flex 
+        flex-flow: row wrap 
+        justify-content: center
+        +mq(1430px, max)
+            justify-content: space-between
+            padding: 0 30px
+        width: 100%
+        >li 
+            flex: 0 0 auto
+            +rem('font-size', 13px) 
+            text-align: center
+            &:not(:last-child)
+                padding-right: 20px
+            >a 
+                position: relative
+                +mq(568px, max)
+                    span 
+                        display: none
+                >i 
+                    font-style: none
+                    display: inline-block
+                    margin-right: 7.5px
+                    position: relative
+                    vertical-align: middle
+                    >.pin
+                        +border(999px)
+                        background-color: $orange
+                        color: white
+                        +rem(('font-size' : 11px, 'line-height' : 21px))
+                        display: block
+                        font-weight: bold
+                        height: 19px
+                        margin: -5px -10px 0
+                        position: absolute 
+                        right: 0
+                        top: 0
+                        text-align: center 
+                        width: 19px
+                    >img
+                        height: 25px
+ 
