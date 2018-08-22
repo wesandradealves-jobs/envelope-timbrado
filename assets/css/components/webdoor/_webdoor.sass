@@ -26,8 +26,14 @@
             +mq(1280px, max)
                 opacity: 1
             position: relative
+            img,svg
+                height: 70px
+                filter: invert(1)
             +transition(1000ms)
             +rem('font-size', 70px)
+            &:last-of-type
+                transform-origin: center
+                transform: rotate(180deg)
             +mq(436px, max)
                 +rem('font-size', 45px)
     .owl-pagination
