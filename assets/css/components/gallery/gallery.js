@@ -7,11 +7,15 @@ function ctrl(s){
 	gallery.parent().find(nav).each(function( index ) {
 		var btn = $(this);
 		if(index == 0)
-			btn.attr("disabled", s)
+			if(!s)
+				btn.attr("disabled", true)
+			else 
+				btn.attr("disabled", s)
 	});		
-}, ctrl(true);
+};
 
 $(document).ready(function () {
+	ctrl(false);
 	gallery.find(items).each(function( index ) {
 		var item = $(this),
 			offset = item.offset(),
