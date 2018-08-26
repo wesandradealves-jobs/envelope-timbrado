@@ -30,14 +30,18 @@
             position: relative
             img,svg
                 height: 70px
+                +mq(436px, max)
+                    height: 45px
                 filter: invert(1)
             +transition(1000ms)
-            +rem('font-size', 70px)
             &:last-of-type
                 transform-origin: center
                 transform: rotate(180deg)
-            +mq(436px, max)
-                +rem('font-size', 45px)
+            [class*="arrow"]
+                line-height: 0 
+                height: 70px
+                +mq(436px, max)
+                    height: 45px
     .owl-dots
         bottom: 40px
         justify-content: center

@@ -1,0 +1,64 @@
+.faq
+	margin: 0 -65px
+	>li
+		padding: 0 30px
+		&:first-child
+			margin-bottom: 25px
+			& ~ li 
+				color: $ice
+				cursor: pointer
+				display: block 
+				position: relative
+				margin: 0 0 -1px
+				overflow: hidden
+				z-index: 1
+				>h2 
+					align-items: center
+					border-top: 1px $ice solid
+					border-bottom: 1px $ice solid
+					color: inherit
+					@extend .flex 
+					flex-flow: row wrap 
+					justify-content: space-between 
+					+rem('font-size', 16px)
+					margin: 0 -30px
+					padding: 25px
+					text-transform: uppercase
+					&::after 
+				        @extend .fa
+				        @extend .fas
+				        content: "\f107"
+				        color: $lightblue
+				        +rem(font-size, 16px) 
+				        flex: 0 0 auto
+				        text-align: center  
+				        width: 16px
+				>p
+					border-bottom: 1px $ice solid  
+					color: inherit
+					display: none
+					flex-flow: row wrap 
+					justify-content: space-between 					
+					max-width: initial 
+					margin: 0 -30px 
+					padding: 0 25px 25px 25px
+				&.-toggle
+					color: black 
+					border-left: 1px $lightblue solid 
+					border-right: 1px $lightblue solid  
+					+shadow(0px,0px,25px,-6px,black)
+					z-index: 2
+					>h2
+						border-bottom: 0
+						border-top-color: $lightblue
+						&::after 
+							content: "\f106"
+					>p  
+						border-bottom-color: $lightblue 
+						@extend .flex
+				&:last-child
+					border-radius: 0 0 8px 8px
+					margin-bottom: -40px
+					>p 
+						border-radius: 0 0 8px 8px
+						

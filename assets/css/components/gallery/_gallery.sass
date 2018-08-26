@@ -1,0 +1,58 @@
+.gallery
+	align-items: center
+	@extend .flex
+	flex-flow: row wrap 
+	justify-content: space-between 
+	flex: 1
+	&-navigation
+		flex: 0 0 auto
+		padding-right: 30px
+		width: 143px
+		&-control
+			background-color: transparent
+			color: black
+			&[disabled] 
+				color: $mediumGray
+				pointer-events: none
+			&:hover 
+				color: $lightblue
+			cursor: pointer
+			display: block 
+			+rem('font-size', 24px)
+			line-height: 0
+			margin: 15px auto 
+		&-inner 
+			max-height: 367px
+			overflow: hidden 			
+			>ul 
+				align-items: center 
+				@extend .flex 
+				flex-flow: column wrap 
+				justify-content: center
+				position: relative 
+				top: 0 
+				+transition(1000ms)
+				>li 
+					background-size: cover 
+					background-position: center center 
+					background-repeat: no-repeat
+					+border(8px)
+					cursor: pointer
+					filter: grayscale(100%)
+					height: 79px
+					opacity: .5
+					+transition(500ms)
+					&.-active,
+					&:hover 
+						filter: none
+						opacity: 1
+					width: 100%
+					&:not(:last-child)
+						margin-bottom: 15px
+	&-big-image 
+		background-size: cover 
+		background-position: center center 
+		background-repeat: no-repeat
+		flex: 1
+		+border(8px)
+		height: 367px

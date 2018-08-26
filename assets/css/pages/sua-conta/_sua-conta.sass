@@ -1,0 +1,41 @@
+.address-list
+    .address-item
+        +border(8px)
+        background-color: white
+        border: 3px solid $softGray
+        &.-toggle
+            border: 3px solid $lightblue 
+            +shadow(0px, 15px, 30px, -10px, rgba(0,0,0,.3)) 
+            .forms 
+                @extend .flex
+        display: block 
+        &:not(:last-child)
+            margin-bottom: 25px
+        padding: 0 30px  
+        .address-item-header
+            align-items: center
+            @extend .flex 
+            flex-flow: row wrap 
+            +mq(812px, max)
+                flex-flow: column wrap
+            +rem('font-size', 13px)
+            justify-content: space-between
+            padding: 20px 0    
+            text-transform: uppercase  
+            .addres-item-details
+                +mq(812px, max)
+                    +border(8px)
+                    border: 2px $lightblue solid
+                    color: $lightblue
+                    display: block 
+                    margin-top: 25px
+                    padding: 6px 12px
+                .fa
+                    color: $lightblue
+                    display: inline-block 
+                    vertical-align: middle
+                    padding-left: 15px
+        .forms 
+            display: none
+            margin-top: 15px
+            padding-bottom: 30px

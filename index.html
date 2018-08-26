@@ -79,7 +79,7 @@
                 </a>
               </li>
               <li>
-                <a href="" title="">
+                <a href="javascript:void(0)" onclick="modalOpen(this, 'login')" title="">
                   <i class="icon profile">
                       <?xml version="1.0" encoding="UTF-8"?>
                       <svg width="21px" height="24px" viewBox="0 0 21 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -240,51 +240,22 @@
                   <h3 class="product-title">Envelope Ofício Janelado</h3>
                   <ul class="product-options">
                     <li>
-                      500un. R$ 295,00 (R$ 0,59 cada)
+                      <input id="1" name="product_option" type="radio" />
+                      <label>
+                        500un. R$ 295,00 (R$ 0,59 cada)
+                      </label>
                     </li>
                     <li>
-                      1000un. R$ 395,00 (R$ 0,59 cada)
-                    </li>
-                    <li class="-featured">
-                      2000un. R$ 650,00 (R$ 0,59 cada)
-                    </li>                                        
-                  </ul>
-                  <p class="delivery-time"><small>Produção: 2 dias úteis</small></p>
-                  <a class="btn btn-1" title="">Configurar agora</a>
-                </li>
-                <li>
-                  <div class="product-thumbnail" style="background-image: url(assets/imgs/foto-produto.jpg)">
-                    <div class="tclone" style="background-image: url(assets/imgs/foto-produto.jpg)"></div>
-                  </div>
-                  <h3 class="product-title">Envelope Ofício Janelado</h3>
-                  <ul class="product-options">
-                    <li class="-featured">
-                      500un. R$ 295,00 (R$ 0,59 cada)
+                      <input id="2" name="product_option" type="radio" />
+                      <label>
+                        1000un. R$ 395,00 (R$ 0,59 cada)
+                      </label>
                     </li>
                     <li>
-                      1000un. R$ 395,00 (R$ 0,59 cada)
-                    </li>
-                    <li>
-                      2000un. R$ 650,00 (R$ 0,59 cada)
-                    </li>                                        
-                  </ul>
-                  <p class="delivery-time"><small>Produção: 2 dias úteis</small></p>
-                  <a class="btn btn-1" title="">Configurar agora</a>
-                </li>
-                <li>
-                  <div class="product-thumbnail" style="background-image: url(assets/imgs/foto-produto.jpg)">
-                    <div class="tclone" style="background-image: url(assets/imgs/foto-produto.jpg)"></div>
-                  </div>
-                  <h3 class="product-title">Envelope Ofício Janelado</h3>
-                  <ul class="product-options">
-                    <li>
-                      500un. R$ 295,00 (R$ 0,59 cada)
-                    </li>
-                    <li class="-featured">
-                      1000un. R$ 395,00 (R$ 0,59 cada)
-                    </li>
-                    <li>
-                      2000un. R$ 650,00 (R$ 0,59 cada)
+                      <input id="3" name="product_option" type="radio" />
+                      <label>
+                        2000un. R$ 650,00 (R$ 0,59 cada)
+                      </label>
                     </li>                                        
                   </ul>
                   <p class="delivery-time"><small>Produção: 2 dias úteis</small></p>
@@ -297,13 +268,78 @@
                   <h3 class="product-title">Envelope Ofício Janelado</h3>
                   <ul class="product-options">
                     <li>
-                      500un. R$ 295,00 (R$ 0,59 cada)
-                    </li>
-                    <li class="-featured">
-                      1000un. R$ 395,00 (R$ 0,59 cada)
+                      <input id="1" name="product_option" type="radio" />
+                      <label>
+                        500un. R$ 295,00 (R$ 0,59 cada)
+                      </label>
                     </li>
                     <li>
-                      2000un. R$ 650,00 (R$ 0,59 cada)
+                      <input id="2" name="product_option" type="radio" />
+                      <label>
+                        1000un. R$ 395,00 (R$ 0,59 cada)
+                      </label>
+                    </li>
+                    <li>
+                      <input id="3" name="product_option" type="radio" />
+                      <label>
+                        2000un. R$ 650,00 (R$ 0,59 cada)
+                      </label>
+                    </li>                                        
+                  </ul>
+                  <p class="delivery-time"><small>Produção: 2 dias úteis</small></p>
+                  <a class="btn btn-1" title="">Configurar agora</a>
+                </li>
+                <li>
+                  <div class="product-thumbnail" style="background-image: url(assets/imgs/foto-produto.jpg)">
+                    <div class="tclone" style="background-image: url(assets/imgs/foto-produto.jpg)"></div>
+                  </div>
+                  <h3 class="product-title">Envelope Ofício Janelado</h3>
+                  <ul class="product-options">
+                    <li>
+                      <input id="1" name="product_option" type="radio" />
+                      <label>
+                        500un. R$ 295,00 (R$ 0,59 cada)
+                      </label>
+                    </li>
+                    <li>
+                      <input id="2" name="product_option" type="radio" />
+                      <label>
+                        1000un. R$ 395,00 (R$ 0,59 cada)
+                      </label>
+                    </li>
+                    <li>
+                      <input id="3" name="product_option" type="radio" />
+                      <label>
+                        2000un. R$ 650,00 (R$ 0,59 cada)
+                      </label>
+                    </li>                                        
+                  </ul>
+                  <p class="delivery-time"><small>Produção: 2 dias úteis</small></p>
+                  <a class="btn btn-1" title="">Configurar agora</a>
+                </li>
+                <li>
+                  <div class="product-thumbnail" style="background-image: url(assets/imgs/foto-produto.jpg)">
+                    <div class="tclone" style="background-image: url(assets/imgs/foto-produto.jpg)"></div>
+                  </div>
+                  <h3 class="product-title">Envelope Ofício Janelado</h3>
+                  <ul class="product-options">
+                    <li>
+                      <input id="1" name="product_option" type="radio" />
+                      <label>
+                        500un. R$ 295,00 (R$ 0,59 cada)
+                      </label>
+                    </li>
+                    <li>
+                      <input id="2" name="product_option" type="radio" />
+                      <label>
+                        1000un. R$ 395,00 (R$ 0,59 cada)
+                      </label>
+                    </li>
+                    <li>
+                      <input id="3" name="product_option" type="radio" />
+                      <label>
+                        2000un. R$ 650,00 (R$ 0,59 cada)
+                      </label>
                     </li>                                        
                   </ul>
                   <p class="delivery-time"><small>Produção: 2 dias úteis</small></p>
@@ -615,6 +651,20 @@
         <a class="developed-by" href="#" title="DEEN" target="_blank"><img src="assets/imgs/deen.png" alt="DEEN"></a>
       </div>
     </footer>
+    <!-- Modal -->
+    <div class="modal">
+      <div class="modal-inner">
+        <div class="modal-inner-header">
+          <h3>Acesse sua conta</h3>
+          <a href="javascript:void(0)" onclick="modalClose(this)" title="Fechar" class="close">
+            <img height="20" src="assets/imgs/close.png" alt="Fechar">
+          </a>
+        </div>
+        <div id="modal-inner-content" class="modal-inner-content">
+  
+        </div>
+      </div>
+    </div>
     <script defer src="assets/js/vendors.js"></script>
     <noscript>Seu Navegador pode não aceitar javascript.</noscript>
     <script defer src="assets/js/commons.js"></script>

@@ -1,0 +1,55 @@
+.sidebar
+    flex: 0 0 auto 
+    width: 188px
+    +mq(812px, max)
+        width: 100%
+    .side-navigation
+        >ul 
+            +mq(812px, max)
+                text-align: center
+            >li 
+                display: block
+                +mq(812px, max)
+                    display: inline-block
+                    margin-bottom: 0 
+                    padding: 0 15px 15px !important
+                    vertical-align: middle
+                    &:not(:last-child)
+                        &::after
+                            content: "/"
+                            display: inline-block 
+                            padding: 0 4px 0 8px
+                            vertical-align: middle 
+                position: relative 
+                &:not(:last-child)
+                    border-bottom: 3px $softGray solid
+                    +mq(812px, max)
+                        border-bottom: 0px
+                        margin-bottom: 0
+                        padding-bottom: 0
+                    margin-bottom: 20px
+                    padding-bottom: 20px
+                    &::after 
+                        background-color: $lightblue
+                        bottom: -3px
+                        content: ""
+                        display: block
+                        +mq(812px, max)
+                            display: none
+                        height: 3px
+                        left: 0
+                        position: absolute 
+                        +transition(500ms) 
+                        width: 0px  
+                &:hover,
+                &.-active
+                    +mq(812px, max)
+                        color: $lightblue 
+                    &::after
+                        width: 78px
+    &+* 
+        padding-left: 122px
+        +mq(890px, max)
+            padding-left: 30px
+            +mq(812px, max)
+                padding-left: 0

@@ -1,0 +1,53 @@
+.porque-comprar-grid
+    &.view-box
+        padding: 0 0
+        +mq(990px, max)
+            p 
+                +rem('line-height', 18px)
+    >* 
+        align-items: stretch
+        @extend .flex 
+        flex-flow: row wrap 
+        justify-content: space-between 
+        >*
+            align-items: center
+            @extend .flex 
+            flex-flow: column wrap
+            flex: 0 0 auto
+            justify-content: center
+            min-height: 348px 
+            +mq(1080px, max)
+                min-height: auto
+            width: 50%
+            +mq(568px, max)
+                min-height: 256px
+                width: 100%
+            &:nth-child(2n+1)
+                order: 1
+                +mq(568px, max)
+                    order: 2
+            &:nth-child(2n+2)
+                order: 2
+                +mq(568px, max)
+                    order: 1
+            &:nth-child(2n+3)
+                order: 4
+            &:nth-child(2n+4)
+                order: 3
+            &[style]
+                background-size: cover 
+                background-position: center center 
+                background-repeat: no-repeat 
+                +border(8px)
+            &:not([style])
+                padding: 0 65px
+                +mq(1080px, max)
+                    padding: 25px
+            .title
+                +rem(('font-size':30px, 'line-height':30px))
+                +mq(990px, max)
+                    +rem(('font-size':20px, 'line-height':20px))
+                max-width: 299px
+                +mq(568px, max)
+                    max-width: 100%
+                padding-bottom: 20px
