@@ -2,18 +2,23 @@
     background-color: $defaultblue
     color: white
     +rem('font-size', 15px)
+    +mq(1366px, min)
+        left: 0
+        position: fixed
+        top: 0 
+        width: 100%
+        z-index: 50
     >.container
         align-items: stretch
         @extend .flex
         font-size: inherit
         flex-flow: row wrap 
         justify-content: space-between
-        max-width: 100%
+        +mq(660px, max)
+            padding-left: 0
+            padding-right: 0
         >*
-            flex: 1
-            align-items: center
-            &:not(:last-child)
-                border-right: 1px solid rgba(242,242,242,0.35)
+            align-items: center        
             @extend .flex
             flex-flow: column wrap 
             justify-content: center 
@@ -22,12 +27,31 @@
                 flex: 0 0 auto 
                 padding-top: 15px
                 padding-bottom: 15px
-                width: 478px
+                +mq(660px, max)
+                    padding-left: 15px
+                    padding-right: 15px
+                width: 469px
+                +mq(1430px, max)
+                    width: 280px
+                    +mq(1280px, max)
+                        width: 205px
             &.envelope-anchor
+                border-left: 1px solid rgba(242,242,242,0.35)
+                border-right: 1px solid rgba(242,242,242,0.35)
                 flex: 0 0 auto
+                +mq(1280px, max)
+                    border-left: 0
+                    border-right: 0
+                    flex: 1
                 width: 171px
+                &.-on
+                    background-color: white
+                    color: $lightblue 
+                    i
+                        transform: rotate(180deg)
                 >a 
                     >i 
+                        +transition(500ms)
                         margin-left: 8px
             .icon 
                 color: $lightblue

@@ -1,0 +1,22 @@
+.breadcrumbs
+    background-color: $purple
+    >.container
+        padding: 40px 50px
+        +mq(737px, max)
+            padding: 40px 15px
+        >nav 
+            >ul
+                +mq(737px, max)
+                    text-align: center
+                >li 
+                    color: white
+                    display: inline-block 
+                    +rem('font-size', 16px)
+                    vertical-align: middle
+                    &:not(:last-child)::after
+                        content: "/"
+                        display: inline-block 
+                        padding: 0 4px 0 8px
+                        vertical-align: middle 
+                    >a  
+                        color: $lightblue

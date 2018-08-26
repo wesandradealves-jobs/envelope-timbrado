@@ -1,5 +1,14 @@
 .search-form
+    border-right: 1px solid rgba(242,242,242,0.35)
+    +mq(1280px, max)
+        border-right: 0
+    flex: 0 0 auto 
     padding: 8px
+    +mq(660px, max)
+        padding: 0
+    width: 300px
+    +mq(660px, max)
+        width: 100%
     >.search-form-inner 
         align-items: center
         background-color: white
@@ -9,6 +18,10 @@
         height: 100%
         justify-content: space-between
         padding: 0 20px
+        +mq(660px, max)
+            +border(0)
+            margin: 0 -20px
+            padding: 20px
         width: 100%
         > span
             flex: 1 

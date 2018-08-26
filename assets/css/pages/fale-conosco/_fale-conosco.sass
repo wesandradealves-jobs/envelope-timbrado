@@ -1,0 +1,102 @@
+.pg-fale-conosco
+	.content-box
+		>.title 
+			+mq(568px, max)
+				text-align: center
+		+mq(812px, max)
+			margin-top: 25px
+		.fale-conosco-canais
+			@extend .flex
+			flex-flow: row wrap 
+			margin: 30px auto
+			justify-content: space-between 
+			+mq(568px, max)
+				align-items: center 
+				justify-content: center 
+				max-width: 320px
+				text-align: center 
+			>* 
+				align-items: stretch 
+				@extend .flex 
+				flex-flow: row wrap 
+				justify-content: space-between
+				flex: 1
+				+mq(737px, max)
+					flex: 0 0 auto
+					justify-content: center 
+					width: 50%
+					+mq(568px, max)
+						width: 100%
+				text-align: left 
+				>i 
+					align-items: center
+					+border(999px)
+					border: 2px $lightblue solid 
+					+shadow(0px,10px,20px,-10px,black)
+					@extend .flex 
+					height: 60px
+					flex: 0 0 auto 
+					flex-flow: column wrap 
+					justify-content: center 
+					width: 60px
+					>svg,>img 
+						height: auto  
+						margin: 0 auto 
+						width: 40px
+				>p 
+					color: $mediumGray
+					padding-top: 5px
+					padding-left: 20px
+					flex: 1 
+					+rem('font-size', 13px)
+					word-wrap: break-word
+					word-break: break-word
+					.fab 
+						color: $lightblue
+						display: inline-block
+						+rem('font-size', 19px) 
+						vertical-align: middle 
+						padding-right: 15px
+					>strong 
+						color: black
+						display: block 
+						+rem('font-size', 16px)
+				&:not(:last-child)
+					padding-right: 20px
+					+mq(737px, max)
+						padding-right: 0
+				&:not(:first-child)
+					padding-left: 20px
+					+mq(737px, max)
+						&:last-child
+							margin-top: 40px
+							padding-left: 0
+						+mq(568px, max)
+							margin-top: 40px
+							padding-left: 0
+		.forms 
+			&.-contato 
+				align-items: stretch
+				>.column 
+					&:nth-child(2)
+						>span 
+							align-items: flex-start 
+							@extend .flex 
+							flex-flow: column wrap 
+							justify-content: space-between
+							height: 100%
+							>label 
+								flex: 0 0 auto
+							>textarea 
+								flex: 1
+					&:last-child
+						>span 
+							align-items: flex-end 
+							@extend .flex 
+							flex-flow: row wrap 
+							justify-content: flex-end
+							.btn 
+								&.-action 
+									max-width: 220px
+									+mq(568px, max)
+										max-width: 100%

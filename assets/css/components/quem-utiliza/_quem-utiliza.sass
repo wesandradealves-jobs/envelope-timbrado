@@ -1,0 +1,36 @@
+.quem-utiliza
+    display: block
+    margin: 55px auto 0
+    &-list 
+        align-items: center 
+        @extend .flex
+        flex-flow: row wrap 
+        margin: 30px auto 0
+        +mq(1048px, max)
+            margin: 30px auto -40px
+        justify-content: center
+        &:hover
+            >*
+                filter: blur(5px)
+                &:hover
+                    filter: blur(0px)
+        >*
+            filter: blur(0px)
+            flex: 0 0 auto 
+            +mq(1048px, max)
+                text-align: center
+                width: 33.333%
+                +mq(737px, max)
+                    width: 50%
+                    +mq(436px, max)
+                        width: 100%
+            padding: 0 20px 40px
+            +transition(500ms)
+            img 
+                height: 28px 
+                +mq(436px, max)
+                    height: auto
+                    max-width: 100% 
+                    width: auto 
+                +mq(1048px, max)
+                    margin: 0 auto 

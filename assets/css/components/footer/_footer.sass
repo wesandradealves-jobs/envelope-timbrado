@@ -1,0 +1,147 @@
+.footer
+    background-color: $matte
+    >.delivery-bar
+        background-color: $lightblue
+        color: white
+        +rem('font-size', 12px) 
+        padding: 15px 0
+        text-align: center
+        text-transform: uppercase
+        >.container
+            >p 
+                +rem('line-height', 24px)
+                >img 
+                    display: inline-block 
+                    margin-right: 10px
+                    vertical-align: middle
+    >.footer-descriptions
+        align-items: center
+        background-color: $defaultblue-darker
+        @extend .flex
+        flex-flow: row wrap 
+        justify-content: space-between
+        >*
+            &:nth-child(2)
+                background-color: $defaultblue
+            color: white 
+            flex: 1
+            font-weight: 400
+            +rem('font-size', 16px)
+            padding: 40px
+            +mq(737px, max)
+                padding: 40px 15px
+                +mq(568px, max)
+                    flex: 0 0 auto 
+                    width: 100%
+            text-align: center
+            text-transform: uppercase 
+            img, p, strong, span 
+                display: inline-block
+                vertical-align: middle
+                margin-right: 10px
+                +mq(990px, max)
+                    display: block 
+                    margin: 0 auto 
+                    text-align: center
+            p 
+                margin-right: 0
+                strong 
+                    font-weight: bold
+                    +mq(990px, max)
+                        margin: 15px auto 9px
+                span 
+                    color: $lightblue
+                    +rem('font-size', 12px)
+                    margin-right: 0
+                    text-align: left
+                    +mq(990px, max)
+                        margin: 0 auto
+                        text-align: center 
+    >.footer-content
+        padding-left: 45px
+        padding-right: 45px
+        .container
+            max-width: 1078px
+        >.footer-navs
+            color: white 
+            font-weight: 400
+            +rem('font-size', 12px)
+            text-transform: uppercase 
+            small 
+                +rem('font-size', 12px)
+                text-transform: initial
+            i 
+                +rem('font-size', 16px)
+                font-weight: bold
+            strong, i
+                display: block 
+                svg, img 
+                    display: inline-block
+                    vertical-align: middle 
+                    margin-right: 8px
+            .footer-horizontal-list
+                >* 
+                    display: inline-block 
+                    padding-bottom: 10px
+                    vertical-align: middle 
+                    &:not(:last-child)
+                        padding-right: 10px
+            >.container
+                padding: 55px 0
+                >ul 
+                    align-items: stretch
+                    @extend .flex
+                    flex-flow: row wrap 
+                    justify-content: space-between
+                    +mq(860px, max)
+                        margin-bottom: -30px
+                    >li 
+                        flex: 1
+                        +mq(860px, max)
+                            padding-bottom: 30px
+                            flex: 0 0 auto 
+                            width: 33.333%
+                            +mq(640px, max)
+                                text-align: center
+                                width: 100%
+                            &:nth-child(3)
+                                padding-right: 0
+                        &:not(:last-child)
+                            padding-right: 30px
+                            +mq(640px, max)
+                                padding-right: 0
+                        p 
+                            margin-bottom: 10px
+                            strong 
+                                margin-bottom: 10px
+                        ul 
+                            &.nav
+                                >li 
+                                    &:not(:last-child)
+                                        margin-bottom: 10px
+    >.disclaimer
+        background-color: white 
+        color: $gray 
+        @extend .flex
+        flex-flow: row wrap 
+        +rem('font-size', 10px)
+        justify-content: space-between
+        padding: 25px 35px
+        >p 
+            color: #888888
+            flex: 1 
+            +mq(568px, max)
+                flex: 0 0 auto
+                padding-bottom: 25px 
+                width: 100%
+            text-align: justify
+        >.developed-by
+            align-items: center
+            @extend .flex
+            flex-flow: column wrap 
+            justify-content: center 
+            flex: 0 0 auto 
+            width: 230px
+            +mq(568px, max)
+                text-align: center
+                width: 100%

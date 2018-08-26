@@ -1,0 +1,192 @@
+.order-grid
+    &-header 
+        display: block 
+        +mq(568px, max)
+            display: none
+        padding: 25px 30px
+        text-transform: uppercase
+        ul 
+            mq(1336px, max)
+                justify-content: space-between
+            >li
+                +rem('font-size', 12px)
+                &:not(:last-child)
+                    mq(1336px, max)
+                        flex: 1
+                        +mq(1080px, max)
+                            text-align: center
+                            +mq(568px, max)
+                                flex: 0 0 auto
+                                width: 100%
+                &:last-child 
+                    +mq(1336px, max)
+                        flex: 0 0 auto
+                        width: 195px    
+                        +mq(1080px, max)
+                            padding-top: 25px
+                            width: 100% 
+                &.actions
+                    align-items: center 
+                    @extend .flex 
+                    flex-flow: row wrap 
+                    justify-content: space-between
+                    .btn 
+                        flex: 1 
+                        +mq(568px, max)
+                            flex: 0 0 auto 
+                            width: 100%
+                        +rem('font-size', 11px)
+                        padding: 18px 8px
+                    .order-details 
+                        color: $lightblue
+                        flex: 0 0 auto
+                        text-align: right  
+                        width: 35px
+                        +mq(568px, max)
+                            padding-top: 25px
+                            text-align: center
+                            width: 100%
+    .order-list 
+        display: block  
+        strong 
+            color: $gray 
+            text-transform: uppercase
+        .order-list-item 
+            +border(8px)
+            background-color: white
+            border: 3px solid $softGray
+            &.-toggle
+                border: 3px solid $lightblue 
+                +shadow(0px, 15px, 30px, -10px, rgba(0,0,0,.3)) 
+            display: block 
+            &:not(:last-child)
+                margin-bottom: 25px
+            padding: 0 30px
+            .order-grid-header
+                +mq(568px, max)
+                    display: flex  
+                padding: 15px 0
+                ul 
+                    mq(1336px, max)
+                        justify-content: space-between
+                    >li 
+                        +rem('font-size', 16px)
+                        text-transform: initial
+                        &:first-child 
+                            label 
+                                border-top: 0px
+                                padding-top: 0 
+                        label
+                            border-top: 1px $softGray solid 
+                            display: block 
+                            padding-top: 25px
+                            +mq(569px, min)
+                                display: none
+                        &:not(:last-child)
+                            mq(1336px, max)
+                                flex: 1
+                                +mq(1080px, max)
+                                    text-align: center
+                                    +mq(568px, max)
+                                        flex: 0 0 auto
+                                        width: 100%
+                        &:last-child 
+                            +mq(1336px, max)
+                                flex: 0 0 auto
+                                width: 195px 
+                                +mq(1080px, max)
+                                    padding-top: 15px
+                                    width: 100%
+            .order-list-details
+                display: none
+                .order-inner-list
+                    @extend .flex
+                    flex-flow: column wrap
+                    >li
+                        border-top: 1px $softGray solid 
+                        padding: 25px 0
+                        width: 100%
+                        >ul 
+                            >li  
+                                flex: 1
+                                +rem('font-size', 13px)
+                                &:not(:last-child)
+                                    padding-right: 30px
+                                    +mq(568px, max)
+                                        padding-right: 0
+                                &:first-child 
+                                    flex: 0 0 auto 
+                                    width: 65px
+                                &:nth-child(2) 
+                                    flex: 0 0 auto
+                                    width: 256px
+                                &:last-child 
+                                    text-align: center 
+                                +mq(568px, max)
+                                    text-align: center 
+                                    flex: 0 0 auto !important
+                                    width: 100% !important
+                                    img 
+                                        margin: 0 auto  
+                .order-footer 
+                    flex-flow: column wrap  
+                    >*  
+                        align-items: center 
+                        border-top: 1px $softGray solid 
+                        @extend .flex 
+                        +rem('font-size', 13px)
+                        flex-flow: row wrap 
+                        justify-content: flex-start 
+                        padding: 25px 0
+                        width: 100%
+                        >span  
+                            +mq(737px, max)
+                                text-align: center 
+                                &:not(:last-child)
+                                    padding-bottom: 25px
+                            &:nth-child(2)
+                                flex: 0 0 auto 
+                                width: 225px
+                                +mq(737px, max)
+                                    width: 100%
+                            &:first-child
+                                color: $gray 
+                                flex: 0 0 auto
+                                width: 170px
+                                +mq(737px, max)
+                                    width: 100% 
+                            flex: 1 
+                            +mq(737px, max)
+                                flex: 0 0 auto 
+                                width: 100%
+                            &:not(:last-child) 
+                                padding-right: 30px
+                                +mq(737px, max)
+                                    padding-right: 0
+                        .order-total 
+                            color: $lightblue
+                        .btn 
+                            width: 100%
+                        small 
+                            display: inline-block
+                            max-width: 296px
+                            +mq(737px, max)
+                                max-width: 100%
+    ul  
+        align-items: center 
+        color: $mediumGray
+        @extend .flex 
+        flex-flow: row wrap 
+        justify-content: space-between
+        text-align: left
+        >li  
+            flex: 1
+            +mq(568px, max)
+                flex: 0 0 auto
+                text-align: center
+                width: 100%
+                &:not(:last-child)
+                    padding-bottom: 25px
+            +rem('font-size, 16px')
+            strong 
+                color: black

@@ -1,0 +1,42 @@
+.modal
+    align-items: center 
+    background-color: rgba(0,0,0,.6)
+    display: none
+    &.-toggle 
+        @extend .flex
+    flex-flow: column wrap
+    height: 100%
+    left: 0 
+    justify-content: center
+    position: fixed
+    top: 0 
+    z-index: 50
+    width: 100%
+    .modal-inner 
+        +border(8px)
+        background-color: white
+        max-width: 466px
+        overflow: hidden
+        position: relative
+        width: 100%
+        object,
+        iframe
+            display: block 
+            min-height: 185px
+            overflow: hidden 
+            width: 100%
+        .close
+            display: block 
+            position: absolute 
+            padding: 0 22px
+            right: 0
+            top: calc(50% - 24px/2)
+        .modal-inner-header
+            background-color: $lightgray
+            color: $gray
+            padding: 35px 15px
+            +rem('font-size', 13px)
+            text-align: center
+            text-transform: uppercase
+        .modal-inner-content
+            padding: 50px

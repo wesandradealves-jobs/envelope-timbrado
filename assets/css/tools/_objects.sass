@@ -1,22 +1,22 @@
 textarea,
 input
     &[placeholder]
-        color: lightgray
+        color: $mediumGray
         font-weight: 300
         opacity: 1
         text-overflow: ellipsis
     &::-moz-placeholder
-        color: lightgray
+        color: $mediumGray
         font-weight: 300
         opacity: 1
         text-overflow: ellipsis
     &::-webkit-input-placeholder
-        color: lightgray
+        color: $mediumGray
         font-weight: 300
         opacity: 1
         text-overflow: ellipsis
     &:-ms-input-placeholder 
-        color: lightgray
+        color: $mediumGray
         font-weight: 300
         opacity: 1
         text-overflow: ellipsis
@@ -29,15 +29,407 @@ input
 
 .container
     display: block
-    max-width: 1200px
+    max-width: 1440px
     margin: 0 auto
     padding-left: 15px
     padding-right: 15px
+    width: 100%
 
 #wrap
     overflow: hidden
+    &.-blur
+        filter: blur(5px)
+        &+footer 
+            filter: blur(5px)
+    .main
+        padding-bottom: 80px
+        +mq(1366px, min)
+            padding-top: 72px
 
 .logo 
     img,svg
         height: auto
         max-width: 100%
+
+.btn
+    +border(9999px)
+    border: 2px rgba(0,0,0,0) solid
+    cursor: pointer
+    display: inline-block
+    +rem('font-size', 14px)
+    text-align: center 
+    padding: 13px 25px
+    text-transform: uppercase
+    &-1
+        background-color: $orange 
+        color: white
+        &:hover
+            background-color: transparent
+            border-color: $orange
+            color: $orange 
+    &-2
+        background-color: $lightblue 
+        color: white 
+        &:hover
+            background-color: transparent
+            border-color: $lightblue 
+            color: $lightblue
+    &-3
+        border-color: $lightblue
+        color: $lightblue
+        &:hover 
+            background-color: $lightblue
+            color: white 
+    &-whatsapp
+        border-color: $green
+        color: $green
+        +rem('font-size', 9px)
+        padding: 5px 15px
+    &.-action
+        align-items: center 
+        @extend .flex 
+        flex-flow: row wrap 
+        justify-content: space-between
+        margin: 25px 0
+        text-align: left
+        width: calc(50% - 15px)
+        +mq(812px, max)
+            width: 100%
+        i  
+            flex: 0 0 auto  
+        span  
+            flex: 1
+
+.section-title
+    color: $gray
+    +rem('font-size',23px)
+    font-weight: 400px
+    padding: 15px 0
+    text-align: center
+
+.product-grid
+    align-items: stretch 
+    @extend .flex
+    flex-flow: row wrap
+    justify-content: space-between
+    >* 
+        &:hover
+            background-color: lighten($darkenGray, 3%)
+            .product-thumbnail
+                >.tclone
+                    transform: scale(1.2)
+        color: $gray
+        flex: 1
+        +mq(1280px, max)
+            flex: 0 0 auto 
+            width: 50%
+            +mq(737px, max)
+                width: 100%
+        padding-bottom: 30px
+        text-align: center
+        .product-thumbnail
+            background-size: cover 
+            background-position: center center 
+            background-repeat: no-repeat
+            display: block 
+            height: 360px
+            overflow: hidden
+            width: 100%
+            >.tclone
+                background-size: inherit 
+                background-position: inherit
+                background-repeat: inherit
+                transform: scale(1.0)
+                +transition(1000ms)
+                height: 100%
+                width: 100%
+        .product-title
+            @extend .section-title
+            padding-top: 30px
+            +rem('font-size', 16px)
+        .product-options
+            max-width: 260px
+            margin: 0 auto
+            >* 
+                position: relative
+                >input 
+                    cursor: pointer
+                    display: block 
+                    height: 100%
+                    left: 0
+                    opacity: 0
+                    position: absolute
+                    top: 0
+                    width: 100%
+                    z-index: 2  
+                    &:checked+label 
+                        background-color: $defaultblue
+                        color: white                        
+                >label
+                    +border(5px)
+                    display: block 
+                    +rem('font-size', 16px)
+                    padding: 5px 0
+                    z-index: 1
+        .delivery-time
+            color: $ice
+            padding: 15px 0 10px
+            +rem('font-size', 13px)
+
+.view-box
+    border: 1px $softGray solid
+    background-color: white 
+    +border(8px)
+    display: block
+    padding: 40px 65px
+    +mq(568px, max)
+        padding: 20px
+        text-align: center
+    text-align: left 
+    .section-title 
+        margin-bottom: 20px
+        text-align: inherit
+    p  
+        +rem(('font-size':15px, 'line-height':25px))
+        color: $mediumGray 
+        font-weight: 400
+        max-width: 636px
+        strong
+            color: black
+        +mq(568px, max)
+            max-width: 100%
+    &+.section-title 
+        display: block
+        padding: 25px 0 
+        text-align: left 
+        +mq(568px, max)
+            text-align: center
+    &+.view-box
+        margin-top: 25px
+
+.content 
+    >.container 
+        align-items: stretch
+        @extend .flex 
+        flex-flow: row wrap
+        justify-content: space-between
+        padding: 50px
+        +mq(568px, max)
+            padding: 50px 15px
+        >.content-box 
+            flex: 1
+
+.topic 
+    +rem('font-size', 15px)
+    color: $ice 
+    margin-bottom: 25px
+    strong 
+        color: black
+    word-wrap: break-word
+    word-break: break-all
+    +mq(1080px, max)
+        margin: 25px 0
+        text-align: center
+
+.custom-select
+    @extend .input
+    +border(8px)
+    overflow: hidden
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    &.-on
+        border: 3px solid $lightblue 
+        outline: none!important
+        +shadow(0px, 15px, 30px, -10px, rgba(0,0,0,.3))         
+    &::after 
+        @extend .fa
+        @extend .fas
+        content: "\f107" 
+        display: block 
+        +rem('font-size', 16px)
+        padding: 0 15px
+        position: absolute 
+        right: 0
+        top: calc(50% - 16px/2)
+        z-index: 2
+    >select 
+        color: $mediumGray
+        outline: none!important
+        position: relative
+        text-align: center
+        width: calc(100% + 50px)
+        z-index: 1
+        -webkit-user-select: inherit
+        -moz-user-select: inherit
+        -ms-user-select: inherit
+        user-select: inherit
+
+.custom-radio-row
+    align-items: stretch
+    border: 2px $mediumGray solid
+    +border(8px)
+    @extend .flex 
+    flex-flow: row wrap 
+    justify-content: space-between
+    width: 100%
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    >.custom-radio
+        flex: 1
+        margin: 0 -4px
+        position: relative
+        >label 
+            align-items: center 
+            +border(8px)
+            color: $mediumGray
+            @extend .flex 
+            flex-flow: column wrap 
+            justify-content: center 
+            height: 53px
+            position: relative 
+            text-align: center
+            width: 100%
+            z-index: 1
+        >input 
+            cursor: pointer
+            display: block 
+            opacity: 0
+            position: absolute 
+            height: 100%
+            width: 100% 
+            -webkit-user-select: inherit
+            -moz-user-select: inherit
+            -ms-user-select: inherit
+            user-select: inherit        
+            z-index: 2
+            &:checked + *
+                background-color: $mediumGray 
+                color: white
+
+.input
+    border: 2px $mediumGray solid
+    color: $mediumGray
+    display: block
+    +rem('font-size', 14px)    
+    padding: 17px 12px    
+    &:focus
+        border: 3px solid $lightblue 
+        outline: none!important
+        padding-top: 16px
+        padding-bottom: 16px
+        +shadow(0px, 15px, 30px, -10px, rgba(0,0,0,.3)) 
+
+
+.forms 
+    align-items: stretch
+    @extend .flex 
+    flex-flow: row wrap 
+    justify-content: space-between
+    &:nth-child(:only-child),
+    &:first-child
+        margin-top: 30px
+    .column 
+        flex: 1
+        +mq(812px, max)
+            flex: 0 0 auto 
+            width: 100%
+        &:first-child 
+            padding-right: 15px 
+            +mq(812px, max)
+                padding-right: 0
+        &:nth-child(2)
+            padding-left: 15px
+            +mq(812px, max)
+                padding-top: 30px
+                padding-left: 0
+        &:last-child 
+            &:not(:first-child):not(:nth-child(2))
+                padding-top: 30px
+                flex: 0 0 auto  
+                width: 100%
+            .-action
+                margin: 0 0
+        >span  
+            display: block 
+            width: 100%
+            &:not(:last-child)
+                padding-bottom: 15px
+        span
+            >label 
+                color: $mediumGray 
+                display: block
+                padding-bottom: 6px
+                +rem('font-size', 12px)
+                text-transform: uppercase   
+                +mq(812px, max)
+                    text-align: left
+            >input:not(.btn), 
+            >textarea 
+                @extend .input
+                +border(8px)
+                text-align: left
+                width: 100%
+            >.nascimento
+                align-items: stretch 
+                @extend .flex
+                flex-flow: row wrap 
+                justify-content: space-between
+                >.custom-select,
+                >input:not(.btn), 
+                >textarea 
+                    @extend .input
+                    text-align: center
+                .custom-select
+                    +border(0px)
+                    border-left: 0px
+                    border-right: 0px
+                    height: 55px
+                >*
+                    flex: 1
+                    &:first-child,
+                    &:last-child
+                        flex: 0 0 auto 
+                        width: 20% 
+                    &:first-child
+                        border-radius: 8px 0 0 8px
+                    &:last-child
+                        border-radius: 0 8px 8px 0
+            .btn  
+                @extend .btn.-action
+                margin: 0
+        .numero-complemento
+            align-items: stretch 
+            @extend .flex
+            flex-flow: row wrap 
+            justify-content: space-between
+            &.-telefone
+                >span 
+                    &:first-child
+                        input
+                            text-align: left
+                        width: 50%
+            >span 
+                flex: 1
+                &:first-child
+                    flex: 0 0 auto
+                    padding-right: 7.5px
+                    width: 25%
+                    input 
+                        text-align: center
+                &:last-child
+                    padding-left: 7.5px 
+    &.-modal 
+        margin-top: 0!important
+        .column 
+            padding-top: 0!important
+            margin-top: 0!important
+            padding-left: 0!important
+            padding-right: 0!important
+            .btn
+                display: block
+                text-align: center
+                width: 100%    
