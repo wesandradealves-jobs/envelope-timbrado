@@ -1,0 +1,57 @@
+.pg-cart
+    background-color: white
+    .cart-steps
+        align-items: stretch 
+        @extend .flex 
+        flex-flow: row wrap 
+        justify-content: space-between
+        >* 
+            align-items: center 
+            border-bottom: 6px $lightblue solid 
+            background-color: $gray
+            color: $mediumGray
+            cursor: pointer
+            @extend .flex
+            flex: 1
+            flex-flow: column wrap
+            +rem('font-size', 17px)
+            height: 100px 
+            justify-content: center
+            +rem('line-height', 100px)
+            text-transform: uppercase 
+            padding: 0 36px
+            span 
+                color: $lightblue
+            &:nth-child(2)
+                background-color: lighten($gray, 5%)
+            &:nth-child(3)
+                background-color: lighten($gray, 10%)
+            &:nth-child(4)
+                background-color: lighten($gray, 15%) 
+            &.-active
+                background-color: white 
+                border-color: transparent
+                color: black
+    .cart-grid
+        ul
+            @extend .flex 
+            flex-flow: row wrap 
+            justify-content: space-between
+            padding: 48px 0 21px
+            >* 
+                color: $mediumGray
+                flex: 1
+                +rem('font-size', 13px)
+                &:nth-child(1)
+                    flex: 0 0 auto 
+                    width: 50px
+                &:nth-child(2)
+                    flex: 0 0 auto 
+                    tex-transform: uppercase 
+                    width: 312px
+        &.cart-header  
+            ul
+                align-items: center
+                border-bottom: 1px $softGray solid 
+                text-transform: uppercase
+                >*
