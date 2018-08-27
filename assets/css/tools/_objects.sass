@@ -215,10 +215,17 @@ input
 
     &.-avaliation
         max-width: 260px
+        +mq(940px, max)
+            margin: 0 auto  
+            justify-content: center
+            >p 
+                flex: 0 0 auto 
         p  
             +rem('font-size', 22px!important)
             color: black!important
             padding-right: 15px
+            +mq(490px, max)
+                padding-left: 0
         .rating-stars
             >li 
                 position: relative

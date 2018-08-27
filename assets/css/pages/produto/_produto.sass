@@ -8,6 +8,8 @@
 			vertical-align: middle
 			&:not(:last-child)
 				margin-right: 20px
+				+mq(490px, max)
+					margin-right: 6px
 			&:first-child,
 			&:last-child
 				>*
@@ -38,11 +40,17 @@
 				font-family: 'BentonSans' 
 				+rem('font-size', 20px)
 				padding: 30px 30px 0
+				+mq(940px, max)
+					text-align: left
 			.testimonial
 				+border(8px)
 				background-color: white 
 				padding: 23px 31px
 				position: relative
+				+mq(940px, max)
+					.rating
+						&-stars
+							margin: 0 auto
 				p 
 					font-family: 'BentonSans' 
 					+rem(('font-size':19px!important, 'line-height':24px!important))
@@ -78,8 +86,16 @@
 					.product-info
 						flex: 0 0 auto 
 						padding-left: 30px
+						+mq(640px, max)
+							padding-left: 0
 						top: 60px
+						+mq(640px, max)
+							margin-top: 60px
+							top: 0 
+							text-align: center
 						width: 378px
+						+mq(640px, max)
+							width: 100%
 					.product-title
 						margin: 15px 0 0
 					.product-model
@@ -92,13 +108,22 @@
 						+rem('font-size', 15px)
 						strong
 							color: $gray
-						margin: 20px 0						
+						margin: 20px 0		
+					.rating 
+						+mq(640px, max)
+							justify-content: center 
+							margin: 0 auto 
+							>p   
+								+mq(640px, max)
+									flex: 0 0 auto				
 			.tabs
 				.tab-content
 					>* 
 						background-color: $lightgray
 						>.container
 							padding: 80px 100px
+							+mq(940px, max)
+								padding: 80px 30px
 							h3 
 								color: $gray
 								margin-bottom: 35px
@@ -123,12 +148,23 @@
 								justify-content: space-between
 								>*
 									flex: 1
+									+mq(940px, max)
+										flex: 0 0 auto 
+										text-align: center
+										width: 100%
 									&:first-child
 										border-right: 0.5px $softGray solid 
 										padding-right: 92px
+										+mq(940px, max)
+											border-right: 0
+											padding-bottom: 92px
+											padding-right: 0
 									&:last-child
 										border-left: 0.5px $softGray solid
 										padding-left: 92px 
+										+mq(940px, max)
+											border-left: 0
+											padding-left: 0
 							.forms 
 								&.-avaliation
 									.rating
@@ -154,12 +190,21 @@
 											flex-flow: column wrap 
 											padding: 20px
 											max-width: 180px
+											+mq(940px, max)
+												max-width: 100%
+												width: 100%
 							.porque-comprar-tab-section
 								.owl-item
 									padding: 0 107px
+									+mq(640px, max)
+										padding: 0 45px
+										+mq(490px, max)
+											padding: 0 0
 								.owl-nav
 									align-items: center
 									@extend .flex 
+									+mq(640px, max)
+										display: none
 									flex-flow: row wrap									
 									justify-content: space-between
 									left: 0
@@ -193,13 +238,22 @@
 									>* 
 										h3.title 
 											+rem('font-size', 30px)
+											+mq(940px, max)
+												line-height: initial
 											margin-bottom: 0
 											padding-bottom: 25px
 										p  
 											+rem(('line-height':22px))
 										>*
+											+mq(940px, max)
+												width: 100%
+											&[style]
+												+mq(490px, max)
+													display: none
 											&:not([style])
 												padding: 0 85px
+												+mq(640px, max)
+													padding: 0 15px
 											min-height: 377px
 							.config 
 								align-items: stretch
@@ -211,9 +265,14 @@
 									+border(8px)
 									+shadow(0px,0px,20px,-10px,black)
 									max-height: 536px
+									+mq(940px, max)
+										margin: 30px auto 0
+										max-height: auto
 									padding: 30px 8px 15px
 									flex: 0 0 auto 
 									width: 320px
+									+mq(940px, max)
+										width: 100%
 									>* 
 										padding-left: 25px 
 										padding-right: 25px
@@ -235,6 +294,8 @@
 										background-color: $lightyellow
 										margin: 18px auto 0
 										padding: 24px
+										+mq(490px, max)
+											text-align: center
 										p
 											color: black!important
 											+rem(('font-size':16px, 'line-height':22px !important))
@@ -258,6 +319,10 @@
 								.config-setup
 									flex: 1
 									padding-right: 19px
+									+mq(940px, max)
+										flex: 0 0 auto 
+										padding-right: 0 
+										width: 100%
 									>div
 										&:not(:last-child)
 											border-bottom: 2px $softGray solid
@@ -280,12 +345,18 @@
 													>* 
 														label 
 															padding-bottom: 0
+															+mq(737px, max)
+																padding-bottom: 25px
 												h3 
 													flex: 0 0 auto 
 												&:first-child
 													flex: 0 0 auto
 													padding-right: 15px 
 													width: 230px
+													+mq(737px, max)
+														padding-right: 0
+														padding-bottom: 15px
+														width: 100%
 												&:last-child 
 													.order-choices
 														>* 
@@ -310,6 +381,8 @@
 										justify-content: space-between
 										>*
 											flex: 0 0 auto 
+											+mq(640px, max)
+												width: 100%
 											position: relative
 											text-align: center
 											&[class*="divisor"]
@@ -319,17 +392,29 @@
 												flex-flow: column wrap 
 												justify-content: space-between
 												+rem('font-size', 18px!important)
-												span  
+												+mq(812px, max)
+													flex-flow: row wrap 
+													width: 100%
+												p  
 													padding: 6px 0
+													+mq(812px, max)
+														padding: 0 6px
 												&::after,
 												&::before
 													background-color: $softGray
 													content: ""
 													flex: 1
 													height: auto 
+													+mq(812px, max)
+														height: 2px
 													margin: 0 auto 
 													width: 2px 
+													+mq(812px, max)
+														width: auto 
 											&[class*="random"]
+												+mq(812px, max)
+													padding-left: 0
+													padding-right: 0
 												>label 
 													height: 100%
 													padding-left: 15px
@@ -365,10 +450,24 @@
 														padding-top: 15px
 											&:not([class*="divisor"])
 												flex: 1
+												+mq(640px, max)
+													flex: 0 0 auto 
+											&:nth-child(3)
+												+mq(812px, max)
+													padding-right: 0!important
+											&:last-child
+												+mq(812px, max)
+													padding-left: 0!important
+													padding-right: 0!important
 											&:not(:last-child)
 												padding-right: 7.5px
+												+mq(640px, max)
+													padding-bottom: 15px
+													padding-right: 0
 											&:not(:first-child)
 												padding-left: 7.5px
+												+mq(640px, max)
+													padding-left: 0
 											input[type="radio"],
 											input[type="checkbox"]
 												cursor: pointer
@@ -425,10 +524,18 @@
 										justify-content: space-between
 										>*
 											flex: 1
+											+mq(640px, max)
+												flex: 0 0 auto 
+												width: 100%
 											&:first-child
-												padding-right: 8px 
+												padding-right: 8px
+												+mq(640px, max)
+													padding-right: 0 
+													padding-bottom: 16px 
 											&:last-child
 												padding-left: 8px
+												+mq(640px, max)
+													padding-left: 0
 											>div 
 												align-items: stretch
 												+border(8px)
@@ -436,6 +543,9 @@
 												@extend .flex 
 												flex-flow: row wrap 
 												justify-content: space-between
+												+mq(490px, max)
+													flex-flow: column wrap 
+													justify-content: center
 												padding: 40px
 												height: 100%
 												i,svg,img 
@@ -446,6 +556,10 @@
 													+rem(('font-size':24px!important,'line-height':32px!important))
 													padding-left: 27px
 													flex: 1
+													+mq(490px, max)
+														padding-left: 0
+														flex: 0 0 auto 
+														width: 100%
 													span 
 														color: $mediumGray!important
 														display: block 
@@ -459,6 +573,19 @@
 												&:hover
 													+shadow(0px,0px,20px,-10px,black)
 				.tab-navigation
+					+mq(640px, max)
+						align-items: center 
+						+mq(490px, max)
+							align-items: stretch
+						display: flex
+						flex-flow: row wrap 
+						justify-content: space-between
+						>* 
+							flex: 1
+							+mq(490px, max)
+								display: flex 
+								flex-flow: column wrap 
+								justify-content: flex-end
 					>*
 						background-color: white
 						border: 1px $lightgray solid
@@ -468,8 +595,11 @@
 							border-color: rgba(0,0,0,0)
 						color: $gray
 						padding: 12px 50px
+						+mq(640px, max)
+							padding: 12px 8px
 						text-transform: uppercase
 						text-align: center
 						+rem('font-size', 13px)
 						&:not(:last-child)
 							margin-right: 7.5px
+						
