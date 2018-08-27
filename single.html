@@ -30,7 +30,7 @@
             </a>
           </h1>
           <div class="envelope-anchor">
-            <a href="javascript:void(0)" onclick="envelopes(this)" title="">Envelopes <i class="icon fas fa-angle-up"></i></a>
+            <a href="javascript:void(0)" onclick="envelopes(this)" title="">Envelopes <i class="icon fa fa-angle-up"></i></a>
           </div>
           <form action="" method="" class="search-form">
             <div class="search-form-inner">
@@ -212,9 +212,9 @@
                   <i class="fa fa-angle-up"></i>
                 </button>
                 <div class="gallery-navigation-inner">
-                  <ul>
-                    <li style="background-image:url(assets/imgs/foto-produto.jpg)"></li>
-                    <li style="background-image:url(assets/imgs/foto-produto.jpg)"></li>
+                  <ul data-scroll="0">
+                    <li class="-active" style="background-image:url(assets/imgs/foto-produto.jpg)"></li>
+                    <li style="background-image:url(assets/imgs/Bitmap.png)"></li>
                     <li style="background-image:url(assets/imgs/foto-produto.jpg)"></li>
                     <li style="background-image:url(assets/imgs/foto-produto.jpg)"></li>
                     <li style="background-image:url(assets/imgs/foto-produto.jpg)"></li>
@@ -229,11 +229,459 @@
                   <i class="fa fa-angle-down"></i>
                 </button>
               </nav>
-              <div class="gallery-big-image" style="background-image:url(assets/imgs/foto-produto.jpg)">
-              </div>
+              <div id="gallery-big-image magnify" class="gallery-big-image" style="background-image:url(assets/imgs/foto-produto.jpg)"></div>
             </div>
             <div class="product-info">
-              
+              <div class="rating">
+                <ul class="rating-stars">
+                  <li class="rated"></li>
+                  <li class="rated"></li>
+                  <li class="rated"></li>
+                  <li class="rated"></li>
+                  <li class=""></li>
+                </ul>
+                <p>51 avaliações</p>
+              </div>
+              <h2 class="product-title title">Envelope ofício janelado</h2>
+              <h3 class="product-model">11x23cm</h3>
+              <p class="product-description">
+                <strong>Sua marca representada com profissionalismo</strong>
+                <br/><br/>
+                - Transmita credibilidade ao cliente<br/>
+                - Invista na personalização dos materiais de escritório                
+              </p>
+              <ul class="product-options">
+                <li>
+                  <input checked="checked" id="1" name="product_option" type="radio" />
+                  <label>
+                    500un. R$ 295,00 (R$ 0,59 cada)
+                  </label>
+                </li>
+                <li>
+                  <input id="2" name="product_option" type="radio" />
+                  <label>
+                    1000un. R$ 395,00 (R$ 0,59 cada)
+                  </label>
+                </li>
+                <li>
+                  <input id="3" name="product_option" type="radio" />
+                  <label>
+                    2000un. R$ 650,00 (R$ 0,59 cada)
+                  </label>
+                </li>                                        
+              </ul>
+              <p class="delivery-time"><small>Produção: 2 dias úteis</small></p>
+              <a class="btn btn-1" href="single.html" title="Configurar agora">Configurar agora</a>
+              <p class="topic">
+                Na próxima tela você pode configurar as especificações do seu produto e conferir o preço                
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="product-details">
+          <div class="tabs">
+            <div class="container">
+              <ul class="tab-navigation">
+                <li class="-active"><a href="javascript:void(0)" title="Sobre este produto">Sobre este produto</a></li>
+                <li><a href="javascript:void(0)" title="Configure este produto">Configure este produto</a></li>
+              </ul>
+            </div>
+            <div class="tab-content">
+              <div class="tab -active">
+                <div class="container">
+                  <div class="columns">
+                    <div class="column">
+                      <h3>Imprima seu envelope</h3>
+                      <p>
+                          O envelope é um item de papelaria extremamente importante para as empresas. Eles são utilizados para armazenar documentos internos e enviar materiais para clientes e parceiros.
+                          <br/><br/>
+                          Esse material deve contar com a identidade visual, além de ter as informações de contato da empresa atualizadas e completas, para evitar extravios, facilitar a identificação.
+                          <br/><br/>
+                          Evite poluir o layout do envelope com imagens, desenhos e muitas cores. Exceto em situações em que exijam esse tipo de design, como em campanhas específicas, ações e datas comemorativas. Nesses casos, abuse da criatividade, se o seu segmento permitir.                        
+                      </p>
+                    </div>
+                    <div class="column">
+                        <h3>A melhor impressão</h3>
+                        <p>
+                            Antes de produzir, defina quais formatos são mais interessantes para o seu segmento.
+                            <br/><br/>
+                            A Envelope Timbrado oferece diversas opções para você criar o seu envelope, de acordo com sua necessidade e expectativas, mantendo a identidade visual da sua marca.
+                            <br/><br/>
+                            Escolha o melhor o formato e o tipo de papel. Nosso sistema de orçamentos automáticos permite que você teste diversas combinações até obter aquela que melhor se adapta a sua necessidade e ao seu orçamento.                         
+                        </p>
+                    </div>
+                  </div>
+                  <h3 class="title">Por que comprar conosco?</h3>
+                  <div class="porque-comprar-tab-section tab-slide">
+                    <div class="owl-carousel owl-theme owl-slideshow tab-slide">
+                      <div class="item">
+                        <div class="view-box porque-comprar-grid">
+                          <ul>
+                            <li style="background-image:url(assets/imgs/Bitmap.png)"></li>
+                            <li>
+                              <div>
+                                <h3 class="title">Somos especialistas em envelopes timbrados!</h3>
+                                <p>Percebemos, cada vez mais, que a adoção de políticas descentralizadoras nos obriga à análise das condições.</p>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="view-box porque-comprar-grid">
+                          <ul>
+                            <li style="background-image:url(assets/imgs/Bitmap.png)"></li>
+                            <li>
+                              <div>
+                                <h3 class="title">Somos especialistas em envelopes timbrados!</h3>
+                                <p>Percebemos, cada vez mais, que a adoção de políticas descentralizadoras nos obriga à análise das condições.</p>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>  
+                  </div>
+                  <div class="quem-utiliza">
+                    <div class="container">
+                      <h2 class="section-title">
+                        Quem já utiliza
+                      </h2>
+                      <ul class="quem-utiliza-list">
+                        <li>
+                          <a href="" title="">
+                            <img src="assets/imgs/logo-rodoil.png" alt="">
+                          </a>
+                        </li>
+                        <li>
+                          <a href="" title="">
+                            <img src="assets/imgs/logo-roadline.png" alt="">
+                          </a>
+                        </li>
+                        <li>
+                          <a href="" title="">
+                            <img src="assets/imgs/logo-prolar.png" alt="">
+                          </a>
+                        </li>
+                        <li>
+                          <a href="" title="">
+                            <img src="assets/imgs/logo-rodoil.png" alt="">
+                          </a>
+                        </li>
+                        <li>
+                          <a href="" title="">
+                            <img src="assets/imgs/logo-roadline.png" alt="">
+                          </a>
+                        </li>
+                        <li>
+                          <a href="" title="">
+                            <img src="assets/imgs/logo-prolar.png" alt="">
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <h3 class="title">Avaliações deste envelope</h3>
+                  <div class="columns">
+                    <div class="column">
+                      <h3>Faça sua avaliação</h3>
+                      <form class="forms -avaliation">
+                        <div class="column">
+                          <div class="rating -avaliation">
+                            <p>Sua nota</p>
+                            <ul class="rating-stars">
+                              <li>
+                                <input id="" value="1" type="checkbox" name="avaliation">
+                                <label></label>
+                              </li>
+                              <li>
+                                <input id="" value="2" type="checkbox" name="avaliation">
+                                <label></label>
+                              </li>
+                              <li>
+                                <input id="" value="4" type="checkbox" name="avaliation">
+                                <label></label>
+                              </li>
+                              <li>
+                                <input id="" value="4" type="checkbox" name="avaliation">
+                                <label></label>
+                              </li>
+                              <li>
+                                <input id="" value="5" type="checkbox" name="avaliation">
+                                <label></label>
+                              </li>
+                            </ul>
+                          </div>
+                          <span>
+                            <input onkeypress="mascara(this,soLetras)" type="text" placeholder="Seu nome" />
+                          </span>
+                          <span>
+                            <input type="email" placeholder="Seu e-mail" />
+                          </span>
+                          <span>
+                            <textarea placeholder="Sua avaliação"></textarea>
+                          </span>
+                          <span>
+                            <button class="btn btn-1">
+                              <span>Avaliar</span>
+                            </button>
+                          </span>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="column">
+                      <h3>Quem já avaliou este envelope</h3>
+                      <ul class="testimonials">
+                        <li>
+                          <blockquote class="testimonial">
+                            <div class="rating">
+                              <ul class="rating-stars">
+                                <li class="rated"></li>
+                                <li class="rated"></li>
+                                <li class="rated"></li>
+                                <li class="rated"></li>
+                                <li class=""></li>
+                              </ul>
+                            </div>
+                            <p>
+                                Ótimos envelopes! Recebi antes do prazo anunciado!
+                                Recomendo!
+                            </p>
+                          </blockquote>
+                          <h4>Robson Almeida</h4>
+                        </li>
+                        <li>
+                          <blockquote class="testimonial">
+                            <div class="rating">
+                              <ul class="rating-stars">
+                                <li class="rated"></li>
+                                <li class="rated"></li>
+                                <li class="rated"></li>
+                                <li class="rated"></li>
+                                <li class=""></li>
+                              </ul>
+                            </div>
+                            <p>
+                                Ótimos envelopes! Recebi antes do prazo anunciado!
+                                Recomendo!
+                            </p>
+                          </blockquote>
+                          <h4>Robson Almeida</h4>
+                        </li>
+                      </ul>
+                      <ul class="testimonials-nav">
+                        <li>
+                          <a href=""  class="prev-testimonial">
+                            <i class="fa fa-angle-left"></i>
+                          </a>
+                        </li>
+                        <li class="-active">
+                          <a href="" >1</a>
+                        </li>
+                        <li>
+                          <a href="" >2</a>
+                        </li>
+                        <li>
+                          <a href="" >3</a>
+                        </li>
+                        <li>
+                          <a href="" >4</a>
+                        </li>
+                        <li>
+                          <a href=""  class="next-testimonial">
+                            <i class="fa fa-angle-right"></i>
+                          </a>                          
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab">
+                <div class="container">
+                  <div class="config">
+                    <div class="config-setup">
+                      <h3>Escolha a arte:</h3>
+                      <div>
+                        <ul class="art-choices">
+                          <li>
+                            <div>
+                              <i>
+                                  <?xml version="1.0" encoding="UTF-8"?>
+                                  <svg width="47px" height="57px" viewBox="0 0 47 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                      <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+                                      <title>upload</title>
+                                      <desc>Created with Sketch.</desc>
+                                      <defs></defs>
+                                      <g id="Loja" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                          <g id="Detalhes-Produto---Configuracao" transform="translate(-179.000000, -1023.000000)" fill="#4A90E2" fill-rule="nonzero">
+                                              <g id="Inferior" transform="translate(0.000000, 841.000000)">
+                                                  <g id="Escolha-a-arte" transform="translate(137.000000, 87.000000)">
+                                                      <g id="Group-2" transform="translate(1.000000, 44.000000)">
+                                                          <g id="upload" transform="translate(41.000000, 51.000000)">
+                                                              <g id="Group" transform="translate(14.000000, 21.000000)">
+                                                                  <path d="M8.74938756,21.6378462 C8.27794258,21.6378462 7.89532057,21.2587692 7.89532057,20.7916923 L7.89702871,1.70415385 C7.89702871,1.23707692 8.27965072,0.858 8.75109569,0.858 C9.22254067,0.858 9.60516268,1.23707692 9.60516268,1.70415385 L9.60345455,20.7916923 C9.60345455,21.2587692 9.22083254,21.6378462 8.74938756,21.6378462 Z" id="Shape"></path>
+                                                                  <path d="M16.1165694,9.84753846 C15.8979282,9.84753846 15.6792871,9.76461538 15.51189,9.60046154 L8.74938756,2.90061538 L1.98688517,9.60046154 C1.65379904,9.93046154 1.11232057,9.93046154 0.77923445,9.60046154 C0.446148325,9.27046154 0.446148325,8.734 0.77923445,8.404 L8.14641627,1.10507692 C8.47950239,0.775076923 9.02098086,0.775076923 9.35406699,1.10507692 L16.7212488,8.404 C17.0543349,8.734 17.0543349,9.27046154 16.7212488,9.60046154 C16.5538517,9.76461538 16.3352105,9.84753846 16.1165694,9.84753846 Z" id="Shape"></path>
+                                                              </g>
+                                                              <g id="Group">
+                                                                  <path d="M42.0493118,56.7006835 L4.64496223,56.7006835 C2.28740865,56.7006835 0.367833104,54.7915294 0.367833104,52.4429804 L0.367833104,4.25770308 C0.367833104,1.90915406 2.28740865,0 4.64496223,0 L31.8081538,0 C32.2803489,0 32.6635797,0.381490196 32.6635797,0.851540616 C32.6635797,1.32159104 32.2803489,1.70308123 31.8081538,1.70308123 L4.64496223,1.70308123 C3.23008791,1.70308123 2.07868475,2.8492549 2.07868475,4.25770308 L2.07868475,52.4429804 C2.07868475,53.8514286 3.23008791,54.9976022 4.64496223,54.9976022 L42.0493118,54.9976022 C43.4641861,54.9976022 44.6155893,53.8514286 44.6155893,52.4429804 L44.6155893,14.823619 C44.6155893,14.3535686 44.9988201,13.9720784 45.4710151,13.9720784 C45.9432102,13.9720784 46.3264409,14.3535686 46.3264409,14.823619 L46.3264409,52.4446835 C46.3264409,54.7915294 44.4085762,56.7006835 42.0493118,56.7006835 Z" id="Shape"></path>
+                                                                  <path d="M45.4710151,15.6751597 L31.8081538,15.6751597 C31.3359588,15.6751597 30.952728,15.2936695 30.952728,14.823619 L30.952728,1.22110924 C30.952728,0.751058824 31.3359588,0.369568627 31.8081538,0.369568627 C32.2803489,0.369568627 32.6635797,0.751058824 32.6635797,1.22110924 L32.6635797,13.9703754 L45.4710151,13.9703754 C45.9432102,13.9703754 46.3264409,14.3518655 46.3264409,14.821916 C46.3264409,15.2919664 45.944921,15.6751597 45.4710151,15.6751597 Z" id="Shape"></path>
+                                                                  <path d="M45.4710151,15.6751597 C45.2486044,15.6751597 45.0261937,15.5883025 44.8585302,15.4179944 L31.195669,1.44761905 C30.8671854,1.11211204 30.8740288,0.570532213 31.2127775,0.243540616 C31.5498152,-0.0851540616 32.0921552,-0.0766386555 32.4223496,0.260571429 L46.0852109,14.2309468 C46.4136944,14.5664538 46.406851,15.1080336 46.0681023,15.4350252 C45.9021497,15.5951148 45.6865824,15.6751597 45.4710151,15.6751597 Z" id="Shape"></path>
+                                                              </g>
+                                                          </g>
+                                                      </g>
+                                                  </g>
+                                              </g>
+                                          </g>
+                                      </g>
+                                  </svg>
+                              </i>
+                              <p>
+                                Quero enviar uma<br/>arte pronta
+                                <a class="btn btn-3" title="Baixe aqui o gabarito">Baixe aqui o gabarito</a>
+                              </p>
+                            </div>
+                          </li>
+                          <li>
+                            <div>
+                              <i>
+                                  <?xml version="1.0" encoding="UTF-8"?>
+                                  <svg width="55px" height="56px" viewBox="0 0 55 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                      <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+                                      <title>arte</title>
+                                      <desc>Created with Sketch.</desc>
+                                      <defs></defs>
+                                      <g id="Loja" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                          <g id="Detalhes-Produto---Configuracao" transform="translate(-600.000000, -1010.000000)" fill="#4A90E2" fill-rule="nonzero">
+                                              <g id="Inferior" transform="translate(0.000000, 841.000000)">
+                                                  <g id="Escolha-a-arte" transform="translate(137.000000, 87.000000)">
+                                                      <g id="Group-3" transform="translate(429.000000, 44.000000)">
+                                                          <g id="Group-45" transform="translate(34.000000, 34.000000)">
+                                                              <g id="Group-4">
+                                                                  <g id="arte" transform="translate(0.000000, 4.000000)">
+                                                                      <circle id="Oval" cx="36" cy="26" r="1"></circle>
+                                                                      <path d="M36.0923499,31.0119508 C35.5118974,30.9235652 34.9707868,31.3349777 34.8847663,31.9303541 C34.5941679,33.9416432 32.9354284,35.6097436 30.4477445,36.3926805 C27.7887638,37.2295642 24.0979622,36.9490409 21.846436,34.4359921 C21.4491891,33.9926475 20.776549,33.9634399 20.3441071,34.370384 C19.9115589,34.7775461 19.8829563,35.4669753 20.2800968,35.9102109 C21.5834832,37.3650306 23.3537623,38.3565619 25.399541,38.7775648 C26.1219433,38.9262182 26.8713533,39 27.6256545,39 C28.7908126,39 29.9674544,38.8239918 31.0720047,38.4763346 C34.3629013,37.4406651 36.5746603,35.1129971 36.9883882,32.2496756 C37.0744087,31.6542991 36.6732277,31.1001184 36.0923499,31.0119508 Z" id="Shape"></path>
+                                                                      <path d="M51.5975925,20.8262031 C49.6301813,18.5215625 46.914816,17.0272813 43.6463328,16.4271406 C46.7756165,14.2932344 49.4747454,12.1696094 51.3992927,10.3165781 C54.3336321,7.4913125 55.3175542,5.5059375 54.4959954,4.06885938 C53.5817813,2.46826563 50.9427269,2.4793125 46.1902423,4.10396875 C42.1747793,5.476625 37.1724717,7.86067188 32.1050021,10.8170781 C31.229647,11.3276406 30.3625183,11.8504531 29.5141155,12.3773125 C28.8849032,10.5817031 29.2999041,8.53059375 30.6882192,6.75204688 C31.7281026,5.41985938 31.9602823,3.72782813 31.2942676,2.33603125 C30.5961051,0.877296875 29.0638277,0.0039375 27.1928603,0 L27.1419864,0 C20.5385593,0 14.0796356,2.63276563 8.95512239,7.41332813 C3.82422292,12.1997969 0.683032623,18.5361094 0.110214598,25.2549063 C-0.578963852,33.3464688 1.98074904,41.03925 7.31763353,46.9160781 C12.560239,52.6891094 19.9926936,56 27.7091758,56 C31.8635137,56 35.7634822,55.2319688 39.3005144,53.7170156 C42.5347931,52.3317813 45.4068931,50.3538438 47.8371483,47.8378906 C50.0904273,45.5050313 51.8670075,42.8195469 53.1175303,39.8558125 C54.3075457,37.0356875 54.9576487,34.047125 54.9979148,31.2133281 C55.0564739,27.0922969 53.8806382,23.5005313 51.5975925,20.8262031 Z M29.6406507,14.8736875 C30.7862867,14.1436094 31.9794411,13.4161562 33.1873165,12.7115625 C37.8726908,9.9780625 42.5383651,7.72657812 46.3250039,6.37175 C50.4934133,4.88042187 52.2000689,4.97776562 52.5979675,5.17026562 C52.5635464,5.42478125 52.2507263,6.55714062 49.5153362,9.10251562 C47.2312081,11.228 43.895723,13.7275469 40.1233721,16.1406875 C38.9308671,16.9037969 37.6897614,17.6622031 36.4346924,18.3945781 C34.70444,19.4036719 32.9754864,20.34725 31.2785725,21.2112031 C30.9399907,20.2127187 30.5060475,19.2437656 29.9779336,18.3193281 C29.4660559,17.4234375 28.8723471,16.5823437 28.2087139,15.8041406 C28.678377,15.4930781 29.1562666,15.1820156 29.6406507,14.8736875 Z M29.3174393,22.1814687 C26.2610027,23.6461094 23.4564458,24.7627187 21.2168053,25.4104375 C21.1002284,24.8446406 20.8952175,24.2977656 20.6043706,23.7882969 C20.3286776,23.3054062 19.9828435,22.8737031 19.5831049,22.5013906 C21.2597774,20.8663437 23.6196751,18.9719687 26.3984704,17.0339531 C27.0435942,17.7625 27.6155463,18.5594062 28.1031777,19.4128594 C28.6074783,20.2955156 29.0133868,21.2238906 29.3174393,22.1814687 Z M52.8332861,31.1819375 C52.6789327,42.065625 43.0294602,53.8125 27.7091758,53.8125 C20.5974431,53.8125 13.7464659,50.7598438 8.91279967,45.4372188 C3.99069951,40.01725 1.63069358,32.9162969 2.26715805,25.4425938 C3.36029661,12.6196875 14.5190991,2.1875 27.1419864,2.1875 L27.1905872,2.1875 C28.2261409,2.1896875 29.0115467,2.590875 29.3452576,3.28835938 C29.6521244,3.92951563 29.5187699,4.71789063 28.9883828,5.39732813 C27.0375326,7.89654688 26.5482776,10.9703125 27.6505085,13.5619531 C27.0702218,13.9397344 26.4998934,14.3191563 25.948832,14.6955156 C25.9462342,14.6972656 25.9436364,14.6990156 25.9411468,14.7007656 C22.4991513,17.047625 19.5926302,19.3820156 17.658774,21.3465 C16.1920915,20.8399844 14.5805807,20.9876406 13.2108832,21.7865156 C10.9620421,23.099125 8.00919331,29.2159219 7.44016376,30.4287813 C7.28775866,30.7534063 7.30302082,31.1330469 7.48075461,31.4442188 C7.65859664,31.7553906 7.97628766,31.9585 8.33067281,31.9875938 C8.92892776,32.0365938 10.62779,32.1604063 12.518674,32.1604063 C14.8131933,32.1604063 17.390225,31.9779688 18.6231043,31.2583906 C19.9585973,30.4794219 20.8842851,29.1778594 21.2048986,27.6816094 C23.8593235,26.9775625 27.3275137,25.6002031 31.0837365,23.751 C33.1882907,22.7159844 35.3527028,21.55125 37.517115,20.2890625 C38.6150162,19.6483437 39.7004696,18.9878281 40.7553986,18.321625 C40.7617849,18.3219531 40.7679547,18.3229375 40.774341,18.3231563 C49.7962249,18.5845625 52.9191222,25.137 52.8332861,31.1819375 Z M19.15912,26.7279687 C19.0898449,27.8279531 18.4849872,28.8132031 17.5406817,29.3640156 C16.5170347,29.9615312 13.0004603,30.0420312 10.1130981,29.9085937 C11.4417718,27.3159687 13.2687928,24.2790625 14.2935223,23.681 C15.2609916,23.116625 16.4306574,23.0919063 17.4230224,23.6150469 C17.9684551,23.9020469 18.4200418,24.339875 18.7291817,24.8813906 C19.0507695,25.4446719 19.1993861,26.0832031 19.15912,26.7279687 Z" id="Shape"></path>
+                                                                      <path d="M19.5,7 C17.0187,7 15,9.0187 15,11.5 C15,13.9813 17.0187,16 19.5,16 C21.9813,16 24,13.9813 24,11.5 C24,9.0187 21.9813,7 19.5,7 Z M19.5,13.75 C18.25935,13.75 17.25,12.74065 17.25,11.5 C17.25,10.25935 18.25935,9.25 19.5,9.25 C20.74065,9.25 21.75,10.25935 21.75,11.5 C21.75,12.74065 20.74065,13.75 19.5,13.75 Z" id="Shape"></path>
+                                                                      <path d="M14.5,36 C12.0187,36 10,38.0187 10,40.5 C10,42.9813 12.0187,45 14.5,45 C16.9813,45 19,42.9813 19,40.5 C19,38.0187 16.9813,36 14.5,36 Z M14.5,42.75 C13.25935,42.75 12.25,41.74065 12.25,40.5 C12.25,39.25935 13.25935,38.25 14.5,38.25 C15.74065,38.25 16.75,39.25935 16.75,40.5 C16.75,41.74065 15.74065,42.75 14.5,42.75 Z" id="Shape"></path>
+                                                                      <path d="M24.5,43 C22.0187,43 20,45.0187 20,47.5 C20,49.9813 22.0187,52 24.5,52 C26.9813,52 29,49.9813 29,47.5 C29,45.0187 26.9813,43 24.5,43 Z M24.5,49.75 C23.25935,49.75 22.25,48.74065 22.25,47.5 C22.25,46.25935 23.25935,45.25 24.5,45.25 C25.74065,45.25 26.75,46.25935 26.75,47.5 C26.75,48.74065 25.74065,49.75 24.5,49.75 Z" id="Shape"></path>
+                                                                      <path d="M37.5,41 C35.0187,41 33,43.0187 33,45.5 C33,47.9813 35.0187,50 37.5,50 C39.9813,50 42,47.9813 42,45.5 C42,43.0187 39.9813,41 37.5,41 Z M37.5,47.75 C36.25935,47.75 35.25,46.74065 35.25,45.5 C35.25,44.25935 36.25935,43.25 37.5,43.25 C38.74065,43.25 39.75,44.25935 39.75,45.5 C39.75,46.74065 38.74065,47.75 37.5,47.75 Z" id="Shape"></path>
+                                                                      <path d="M46.5,30 C44.0187,30 42,32.0187 42,34.5 C42,36.9813 44.0187,39 46.5,39 C48.9813,39 51,36.9813 51,34.5 C51,32.0187 48.9813,30 46.5,30 Z M46.5,36.75 C45.25935,36.75 44.25,35.74065 44.25,34.5 C44.25,33.25935 45.25935,32.25 46.5,32.25 C47.74065,32.25 48.75,33.25935 48.75,34.5 C48.75,35.74065 47.74065,36.75 46.5,36.75 Z" id="Shape"></path>
+                                                                  </g>
+                                                              </g>
+                                                          </g>
+                                                      </g>
+                                                  </g>
+                                              </g>
+                                          </g>
+                                      </g>
+                                  </svg>
+                              </i>
+                              <p>
+                                Não tenho a arte.<br/>Quero que seja criada.
+                                <span>Não cobramos para elaborar a arte para você. Clique para enviar logotipo e dados para a criação</span>
+                              </p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h3>Escolha a quantidade:</h3>
+                        <ul class="order-choices">
+                          <li>
+                            <input checked="checked" type="radio" name="qti_choice" />
+                            <label>
+                              <h2>500 <small>unidades</small></h2>
+                              <p>R$ 0,59 cada</p>
+                            </label>
+                          </li>
+                          <li>
+                            <input type="radio" name="qti_choice" />
+                            <label>
+                              <h2>1.000 <small>unidades</small></h2>
+                              <p>R$ 0,49 cada</p>
+                            </label>
+                          </li>
+                          <li>
+                            <input type="radio" name="qti_choice" />
+                            <label>
+                              <h2>2.000 <small>unidades</small></h2>
+                              <p>R$ 0,39 cada</p>
+                            </label>
+                          </li>
+                          <li class="qti_choice_divisor">
+                            <p>ou</p>
+                          </li>
+                          <li class="qti_choice -random_choice">
+                            <label>
+                              <input id="randomQti" type="number" placeholder="Digite" />
+                              <h2><small>a quantidade desejada*</small></h2>
+                              <p>R$ 0,00 cada <small>*múltiplos de 500</small></p>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <div>
+                          <h3>Qual é o seu CEP?</h3>
+                          <ul class="order-choices">
+                            <li class="qti_choice -random_choice">
+                              <label>
+                                <input class="cep" type="text" placeholder="00000-000" />
+                                <h2><a href="" title="Não sabe o  seu cep?"><small>Não sabe o seu cep?</small></a></h2>
+                                <a href="" title="Calcular frete" class="btn btn-2">Calcular frete</a>
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h3>Selecione a opção de frete:</h3>
+                          <ul class="order-choices">
+                            <li>
+                              <input checked="checked" type="radio" name="qti_frete_choice" />
+                              <label>
+                                <i>
+                                  <img src="assets/imgs/mini-truck.png" alt="Selecione a opção de frete" />
+                                </i>
+                                <h2>5 dias úteis* <small>Entrega Expressa</small></h2>
+                                <p>R$ 15,00<small>* após a aprovação de layout</small></p>
+                              </label>
+                            </li>
+                            <li>
+                              <input type="radio" name="qti_frete_choice" />
+                              <label>
+                                <i>
+                                  <img src="assets/imgs/mini-truck.png" alt="Selecione a opção de frete" />
+                                </i>
+                                <h2>10 dias úteis* <small>Entrega Normal</small></h2>
+                                <p>R$ 10,00<small>* após a aprovação de layout</small></p>
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <aside class="config-sidebar">
+                      <h3>Resumo do Pedido</h3>
+                      <p class="order-description">
+                          <strong>Formato:</strong> Oficio (23x0 x 11,0 cm)<br/>
+                          <strong>Impressão:</strong> Frente<br/>
+                          <strong>Cores:</strong> 4x0 colorido<br/>
+                          <strong>Papel:</strong> Offset 90g<br/>
+                          <strong>Acabamento:</strong> Janela de acetato                        
+                      </p>
+                      <div class="order-value">
+                        <p>1.000 envelopes<br/>Entrega normal - 10 dias úteis<br/>R$ 10,00</p>
+                        <h4>
+                          Total:<br/>R$ 500,00
+                        </h4>
+                      </div>
+                      <a href="" title="Fechar Pedido" class="btn btn-4">Fechar pedido</a>
+                      <a class="print-order" href="javascript:void(0)"><i class="fa fa-print"></i> Imprimir orçamento</a>
+                    </aside>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -386,10 +834,10 @@
                 <p><strong>Redes Sociais</strong></p>
                 <ul class="footer-horizontal-list">
                   <li>
-                    <a href="" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="" title="Instagram"><i class="fa fa-instagram"></i></a>
                   </li>
                   <li>
-                    <a href="" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="" title="Facebook"><i class="fa fa-facebook-f"></i></a>
                   </li>
                 </ul>
                 <p><strong>Compra 100% Segura</strong></p>

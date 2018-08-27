@@ -176,15 +176,31 @@ $.getJSON('estados_cidades.json', function (data) {
 //         }
 //     });   
 // });
+function rating(){
+    $(".rating-stars").find("input").each(function ( index ) {
+        var input = $(this);
+        input.click(function() {
+            input.parent().nextAll().find("input").prop("checked", false)
+            if(input.is(":checked"))
+                input.parent().prevAll().find("input").prop("checked", true)
+        });
+    });
+}
 $(document).ready(function () {
-    $('.owl-slideshow').owlCarousel({
+    $('.owl-slideshow:not(.tab-slide)').owlCarousel({
         items: 1,
         nav: true,
         dots: true,
         navText: ["<i class='owl-prev-arrow'><img src='assets/imgs/thin-arrow.png'/></i>","<i class='owl-next-arrow'><img src='assets/imgs/thin-arrow.png'/></i>"]
     });
-    $(".webdoor").find(".owl-dots").appendTo($(".webdoor .owl-stage-outer"));
-    $(".webdoor").find(".owl-nav").appendTo($(".webdoor .owl-stage-outer"));
+    $('.owl-slideshow.tab-slide').owlCarousel({
+        items: 1,
+        nav: true,
+        dots: true,
+        navText: ["<i class='owl-prev-arrow fa fa-angle-left'></i>","<i class='owl-next-arrow fa fa-angle-right'></i>"]
+    });
+    $(".webdoor, .tab-slide").find(".owl-dots").appendTo($(".webdoor .owl-stage-outer"));
+    $(".webdoor, .tab-slide").find(".owl-nav").appendTo($(".webdoor .owl-stage-outer"));
     $('.telefone').mask('(99) 9999-9999');
     $('.celular').mask('(99) 9-9999-9999');
     $('.cpf').mask('999.999.999-99');
@@ -192,6 +208,15 @@ $(document).ready(function () {
     $('.ano').mask('9999');
     $('.dia').mask('99');
     checkBlur();
+    rating();
+    $("#randomQti").focus(function() {
+        $(this).closest("ul").find("input").prop("checked", false)
+    }).keypress(function() {
+        $(this).closest("ul").find("input").prop("checked", false)
+    });
+    $("[name*='qti_choice']").click(function() {
+        $(this).closest("ul").find("#randomQti").val("")
+    });
 });
       
       
