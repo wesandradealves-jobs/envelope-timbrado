@@ -1,15 +1,15 @@
 .sidebar
     flex: 0 0 auto 
     width: 188px
-    +mq(812px, max)
+    +mq(940px, max)
         width: 100%
     .side-navigation
         >ul 
-            +mq(812px, max)
+            +mq(940px, max)
                 text-align: center
             >li 
                 display: block
-                +mq(812px, max)
+                +mq(940px, max)
                     display: inline-block
                     margin-bottom: 0 
                     padding: 0 15px 15px !important
@@ -23,7 +23,7 @@
                 position: relative 
                 &:not(:last-child)
                     border-bottom: 3px $softGray solid
-                    +mq(812px, max)
+                    +mq(940px, max)
                         border-bottom: 0px
                         margin-bottom: 0
                         padding-bottom: 0
@@ -34,7 +34,7 @@
                         bottom: -3px
                         content: ""
                         display: block
-                        +mq(812px, max)
+                        +mq(940px, max)
                             display: none
                         height: 3px
                         left: 0
@@ -43,13 +43,13 @@
                         width: 0px  
                 &:hover,
                 &.-active
-                    +mq(812px, max)
+                    +mq(940px, max)
                         color: $lightblue 
                     &::after
                         width: 78px
     &+* 
         padding-left: 122px
-        +mq(890px, max)
-            padding-left: 30px
-            +mq(812px, max)
-                padding-left: 0
+        +mq(940px, max)
+            flex: 0 0 auto 
+            padding-left: 0
+            width: 100%

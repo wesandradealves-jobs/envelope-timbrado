@@ -299,7 +299,7 @@
                   </div>
                   <div class="column">
                     <span>
-                      <button class="btn btn-1 -action"><span>Alterar meu cadastro</span> <i class="fa fa-angle-right"></i></button>
+                      <a href="javascript:void(0)" onclick="modalOpen(this, 'cadastro')" class="btn btn-1 -action"><span>Alterar meu cadastro</span> <i class="fa fa-angle-right"></i></a>
                     </span>
                   </div>
                 </form>
@@ -309,7 +309,7 @@
                     <strong>Alterar meus endereços</strong><br/>MUDOU DE ENDEREÇO? QUER MODIFICAR SUA SENHA?<br/>
                     UTILIZE O FORMULÁRIO ABAIXO PARA ALTERAR OS SEUS DADOS CADASTRAIS. 
                   </p>
-                  <a class="btn btn-2 -action" href="javascript:void(0)" onclick="modal('novoEndereco')"><span>Cadastrar novo endereço</span> <i class="fa fa-plus"></i></a>
+                  <a class="btn btn-2 -action" href="javascript:void(0)" onclick="modalOpen(this, 'cadastro')"><span>Cadastrar novo endereço</span> <i class="fa fa-plus"></i></a>
                   <ul class="address-list">
                     <li class="address-item">
                       <div class="address-item-header">
@@ -338,7 +338,7 @@
                           <span class="numero-complemento">
                             <span>
                               <label for="">Número</label>
-                              <input readonly="readonly" type="text" value="3020" maxlength="6" />
+                              <input readonly="readonly" type="number" value="3020" maxlength="6" />
                             </span>
                             <span>
                                 <label for="">Complemento</label>
@@ -372,7 +372,7 @@
                           <span class="numero-complemento -telefone">
                             <span>
                               <label for="">Telefone</label>
-                              <input readonly="readonly" class="telefone" type="text" value="(54) 99999999" maxlength="6" />
+                              <input readonly="readonly" class="telefone" type="text" value="(54) 99999999" />
                             </span>
                             <span>
                                 <label for="">Celular</label>
@@ -381,7 +381,7 @@
                           </span>
                         </div>
                         <div class="column">
-                            <button class="btn btn-1 -action"><span>Alterar este endereço</span> <i class="fa fa-angle-right"></i></button>
+                            <a href="javascript:void(0)" onclick="modalOpen(this, 'endereco')" class="btn btn-1 -action"><span>Alterar este endereço</span> <i class="fa fa-angle-right"></i></a>
                         </div>
                       </form>
                     </li>
@@ -574,7 +574,7 @@
     <div class="modal">
       <div class="modal-inner">
         <div class="modal-inner-header">
-          <h3>Acesse sua conta</h3>
+          <h3></h3>
           <a href="javascript:void(0)" onclick="modalClose(this)" title="Fechar" class="close">
             <img height="20" src="assets/imgs/close.png" alt="Fechar">
           </a>

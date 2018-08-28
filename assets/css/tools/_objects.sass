@@ -87,6 +87,13 @@ input
         padding: 15px 30px
         &:hover
             background-color: lighten($green, 5%)
+    &-5
+        border-color: $mediumGray
+        color: $mediumGray 
+        &:hover
+            background-color: $orange
+            border-color: transparent 
+            color: white
     &-whatsapp
         border-color: $green
         color: $green
@@ -103,9 +110,21 @@ input
         +mq(812px, max)
             width: 100%
         i  
-            flex: 0 0 auto  
+            flex: 0 0 auto
+            line-height: 0  
+            top: -2px
         span  
+            &:last-child
+                text-align: right
             flex: 1
+
+.actions
+    &.-remover 
+        background: url(assets/imgs/close.png) center center / contain no-repeat transparent 
+        display: block 
+        height: 15px
+        margin: 0 auto
+        width: 15px 
 
 .section-title
     color: $gray
@@ -159,6 +178,14 @@ input
             margin: 0 auto     
             max-width: 260px
             width: 100%
+label,
+p
+    font-family: 'BentonSansCond Book'
+    strong 
+        font-family: 'CircularStd'
+
+i  
+    font-style: initial
 
 .produto    
     .product-options
@@ -209,6 +236,7 @@ input
                 content: "\f005"
     >p  
         color: $mediumGray
+        font-family: 'BentonSansCond'
         +rem('font-size', 15px)
         padding-left: 15px
         flex: 1
@@ -517,6 +545,7 @@ input
             padding-left: 0!important
             padding-right: 0!important
             .btn
-                display: block
-                text-align: center
+                &:not(.-action)
+                    display: block
+                    text-align: center
                 width: 100%    

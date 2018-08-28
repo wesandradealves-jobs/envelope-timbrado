@@ -1,5 +1,123 @@
 .pg-cart
-    background-color: white
+    background-color: $lightgray
+    .cart 
+        .container 
+            max-width: 100%
+            padding-left: 0 
+            padding-right: 0
+        .tab-content 
+            >* 
+                padding-top: 48px 
+                .container 
+                    &.-login 
+                        max-width: 950px
+                        .select-addresses
+                            >ul 
+                                >li 
+                                    display: block 
+                                    position: relative 
+                                    &:not(:last-child)
+                                        margin-bottom: 9px
+                                    input 
+                                        cursor: pointer
+                                        display: block 
+                                        height: 100%
+                                        left: 0
+                                        opacity: 0
+                                        position: absolute 
+                                        top: 0
+                                        width: calc(100% - 180px)
+                                        z-index: 2
+                                        &:checked+label
+                                            border-color: $lightblue 
+                                            +shadow(0px, 15px, 30px, -10px, rgba(0,0,0,.3)) 
+                                            &::before 
+                                                background-color: white 
+                                                border-color: $lightblue
+                                    label 
+                                        align-items: center 
+                                        +border(8px)
+                                        background-color: white 
+                                        border: 3px transparent solid
+                                        color: $gray
+                                        @extend .flex 
+                                        flex-flow: row wrap 
+                                        font-family: 'CircularStd'
+                                        justify-content: space-between
+                                        &::before 
+                                            border: 3px transparent solid 
+                                            background-color: $lightblue
+                                            content: ""
+                                            +border(999px)
+                                            flex: 0 0 auto 
+                                            height: 20px
+                                            width: 20px 
+                                        >span 
+                                            flex: 1
+                                            +rem('font-size', 13px)
+                                            padding: 0 30px
+                                            text-transform: uppercase
+                                            &:last-child
+                                                padding-right: 0
+                                                text-align: right 
+                                            a  
+                                                color: $mediumGray
+                                        position: relative 
+                                        padding: 25px
+                                        z-index: 1
+                        .columns 
+                            align-items: stretch 
+                            @extend .flex
+                            flex-flow: row wrap 
+                            justify-content: space-between
+                            h4
+                                &:first-child
+                                    +rem('font-size', 18px)
+                                    font-weight: 300
+                                    margin-bottom: 15px
+                                    text-align: center 
+                                    &+p 
+                                        color: $mediumGray
+                                        margin-bottom: 32px
+                                        text-align: center 
+                            >* 
+                                flex: 1 
+                                &:first-child 
+                                    padding-right: 15px 
+                                &:nth-child(2n+2)
+                                    padding-left: 15px
+                                &:last-child
+                                    &:not(:nth-child(3n+2)),
+                                    &[class*="full"]
+                                        flex: 0 0 auto 
+                                        padding-top: 30px
+                                        padding-left: 0 
+                                        padding-right: 0
+                                        width: 100%
+                                        .btn 
+                                            @extend .flex
+                                            margin: 0 auto 
+                                            max-width: 279px
+                                            &:nth-child(3n+2):not(:last-child)
+                                                margin-bottom: 40px
+                                            &:not(:last-child)
+                                                margin-bottom: 15px
+                                &:not([class*="full"])
+                                    form
+                                        +border(10px)
+                                        &:hover
+                                            background-color: white  
+                                        height: 100%
+                                        padding: 54px
+                                        input 
+                                            background-color: transparent
+                                        .btn 
+                                            width: 100% 
+                                            &+p 
+                                                color: $gray
+                                                font-family: 'CircularStd'
+                                                font-weight: 300 
+                                                padding: 15px 0
     .cart-steps
         align-items: stretch 
         @extend .flex 
@@ -16,12 +134,32 @@
             flex-flow: column wrap
             +rem('font-size', 17px)
             height: 100px 
+            +mq(812px, max)
+                height: auto 
             justify-content: center
             +rem('line-height', 100px)
-            text-transform: uppercase 
+            +mq(812px, max)
+                line-height: initial
+            overflow: hidden
             padding: 0 36px
+            +mq(812px, max)
+                padding: 15px 0
+            text-overflow: ellipsis
+            +mq(1048px, max)
+                +rem('font-size', 24px)
+                text-align: center					
+            white-space: nowrap
             span 
-                color: $lightblue
+                &:first-of-type
+                    color: $lightblue
+                    font-weight: 300
+                    font-family: 'Oswald', sans-serif
+                    margin-right: 10px
+                    +mq(1048px, max)
+                        margin-right: 0
+                +mq(1048px, max)
+                    &:last-of-type 
+                        display: none
             &:nth-child(2)
                 background-color: lighten($gray, 5%)
             &:nth-child(3)
@@ -29,29 +167,259 @@
             &:nth-child(4)
                 background-color: lighten($gray, 15%) 
             &.-active
-                background-color: white 
+                background-color: $lightgray 
                 border-color: transparent
                 color: black
     .cart-grid
-        ul
+        ul.listing
+            align-items: center
             @extend .flex 
             flex-flow: row wrap 
-            justify-content: space-between
-            padding: 48px 0 21px
+            justify-content: center
+            padding: 0 0 21px
+            i 
+                display: inline-block 
+                margin-left: 10px
+                vertical-align: middle 
             >* 
                 color: $mediumGray
+                display: block
                 flex: 1
+                overflow: hidden
+                padding: 0 30px
+                +mq(1280px, max)
+                    padding: 0 15px
+                text-overflow: ellipsis					
+                white-space: nowrap
+                strong, b  
+                    color: black
+                    font-weight: bold
+                strong  
+                    display: block
                 +rem('font-size', 13px)
+                img  
+                    display: block
+                    filter: grayscale(1)
+                    opacity: .5
+                    max-width: 100% 
+                    margin: 0 auto 
                 &:nth-child(1)
-                    flex: 0 0 auto 
-                    width: 50px
+                    padding: 0 0
+                    +mq(1280px, max)
+                        padding-left: 15px
+                    max-width: 100px
                 &:nth-child(2)
-                    flex: 0 0 auto 
-                    tex-transform: uppercase 
-                    width: 312px
+                    padding-left: 15px
+                    max-width: 330px
+                    +mq(1280px, max)
+                        flex: 0 0 auto
+                        max-width: initial 
+                        width: 295px
+                &:nth-child(3),
+                &:nth-child(4)
+                    max-width: 200px
+                &:nth-child(4)
+                    +mq(1280px, max)
+                        flex: 0 0 auto 
+                        max-width: initial 
+                        width: 180px
+                &:nth-child(5)
+                    max-width: 160px
+                    & ~ li:not(:last-child)
+                        max-width: 175px
+                &:last-child 
+                    max-width: 90px
+                    padding-left: 0
+                    padding-right: 15px
+                +mq(1048px, max)
+                    &:nth-child(1)
+                        +mq(1190px, max)
+                            flex: 0 0 auto
+                            padding-left: 0
+                            text-align: center  
+                            width: 100%                         
+                    &:nth-child(2)
+                        flex: 1 
+                        max-width: initial
+                        +mq(1190px, max)
+                            flex: 0 0 auto
+                            padding: 25px 0
+                            text-align: center  
+                            width: 100% 
+                        & ~ li
+                            flex: 0 0 auto
+                            max-width: initial 
+                    +mq(640px, max)
+                        &:nth-child(3),
+                        &:nth-child(4)
+                            flex: 0 0 auto 
+                            padding-bottom: 25px
+                            text-align: center
+                            width: 50%
+                        &:nth-child(5)
+                            flex: 0 0 auto 
+                            width: 25%
+                            &~li  
+                                flex: 0 0 auto
+                                text-align: center  
+                                width: 25%
+                                p  
+                                    display: block 
+                                    text-align: inherit
+                            +mq(568px, max)
+                                width: 33.333% 
+                                &~li 
+                                    width: 33.333% 
+                                    &:last-child 
+                                        padding-top: 50px
+                                        width: 100%
+                                        >a  
+                                            background-size: 19px
+                                            +border(999px)
+                                            display: inline-block
+                                            line-height: 30px
+                                            margin: 0 auto 
+                                            width: 30px
+                                            height: 30px
+
         &.cart-header  
-            ul
+            +mq(1048px, max)
+                display: none
+            .listing
                 align-items: center
                 border-bottom: 1px $softGray solid 
+                font-family: 'BentonSansCond'
+                letter-spacing: .65px
                 text-transform: uppercase
-                >*
+                >li 
+                    +mq(1190px, max)
+                        +rem('font-size', 10px)
+        &.cart-list 
+            .container
+                >ul 
+                    >li 
+                        &:nth-child(even)
+                            background-color: white 
+                        .listing 
+                            padding: 38px 0
+                            .btn 
+                                max-width: 150px
+                                padding: 6px
+                                text-transform: initial
+                                width: 100%
+                            input[type="number"]
+                                border: 2px $lightblue solid 
+                                background-color: transparent
+                                +border(999px) 
+                                color: black 
+                                font-weight: bold
+                                padding: 6px 0
+                                max-width: 80px
+                                text-align: center
+                                text-indent: 11px
+                                width: 100% 
+                                &[placeholder]
+                                    color: black
+                                &::-moz-placeholder
+                                    color: black
+                                &::-webkit-input-placeholder
+                                    color: black
+                                &:-ms-input-placeholder 
+                                    color: black
+    .cart-totals
+        .cupom-form
+            border: 1px $softGray solid
+            align-items: center 
+            @extend .flex
+            flex-flow: row wrap 
+            margin-top: 10px
+            margin-left: auto
+            justify-content: space-between
+            width: 129px
+            >* 
+                flex: 1
+                &:last-child
+                    max-width: 45px
+                button, input
+                    padding: 10px 16px 
+                    width: 100%
+        >*:not(.cart-totals-footer)
+            align-items: stretch 
+            @extend .flex 
+            border-bottom: 1px $softGray solid 
+            flex-flow: row wrap 
+            justify-content: flex-end 
+            h4 
+                +rem('font-size', 30px)
+                +mq(812px, max)
+                    +rem('font-size', 22px)
+                font-weight: normal 
+                strong 
+                    font-weight: bold
+                &+p 
+                    color: black
+                    +rem('font-size', 14px)
+                &.total-value 
+                    color: $lightblue
+            p  
+                color: $mediumGray 
+                +mq(640px, max)
+                    +rem('font-size', 12px)
+                strong 
+                    color: black 
+                    display: block
+                b 
+                    color: black
+                    font-weight: bold
+            >span 
+                @extend .flex
+                flex-flow: column wrap 
+                justify-content: center 
+                flex: 1
+                padding: 31px 0
+                &:first-child
+                    border-right: 1px $softGray solid
+                    padding-right: 50px
+                    +mq(737px, max)
+                        padding-right: 15px
+                        padding-left: 15px
+                    text-align: right
+                &:last-child 
+                    max-width: 345px
+                    padding-left: 15px
+                    +mq(737px, max)
+                        padding-right: 15px
+        &-footer 
+            align-items: center 
+            @extend .flex 
+            flex-flow: row wrap 
+            justify-content: center 
+            padding-top: 47px
+            >* 
+                flex: 1
+                padding: 0 15px
+                +mq(812px, max)
+                    padding: 0 6px
+                    +mq(530px, max)
+                        flex: 0 0 auto 
+                        padding-left: 30px 
+                        padding-right: 30px
+                        width: 100% 
+                        &:not(:last-child)
+                            padding-bottom: 25px
+                .btn
+                    margin: 0 auto
+                    max-width: 292px
+                    width: 100%
+                    +mq(812px, max)
+                        padding-left: 0 
+                        padding-right: 0
+                        i 
+                            display: none 
+                        span 
+                            text-align: center!important
+                        +mq(737px, max)
+                            +rem('font-size', 10px)
+                            +mq(530px, max)
+                                max-width: 100%
+                                +rem('font-size', 16px)

@@ -1,63 +1,118 @@
+.pg-faq
+	.view-box
+		&:not(:last-of-type)
+			margin-bottom: 21px
+		padding: 34px 0 0
+		.title 
+			padding: 0 24px
+			+rem('font-size', 17px) 
 .faq
-	margin: 0 -65px
+	margin: 28px 0 0
 	>li
-		padding: 0 30px
-		&:first-child
-			margin-bottom: 25px
-			& ~ li 
-				color: $ice
-				cursor: pointer
+		font-family: 'BentonSansCond'
+		border: 1px $ice solid
+		border-left-color: transparent 
+		border-right-color: transparent  
+		border-bottom-color: transparent 
+		overflow: hidden
+		&:last-child
+			border-radius: 0 0 8px 8px
+		&.-toggle
+			border-top-color: $lightblue
+			border-left-color: $lightblue 
+			border-right-color: $lightblue  
+			border-bottom-color: $lightblue 
+			color: $gray
+			+shadow(0px,0px,25px,-6px,black)
+			z-index: 2
+			>h2 
+				color: inherit 
+				&::after 
+					content: "\f106"
+			>p 
+				color: inherit
 				display: block 
-				position: relative
-				margin: 0 0 -1px
+		>h2
+			align-items: center
+			color: $ice 
+			cursor: pointer
+			@extend .flex 
+			flex-flow: row wrap 
+			justify-content: space-between 
+			+rem('font-size', 16px)
+			padding: 23px
+			text-transform: uppercase
+			>span  
+				flex: 1
 				overflow: hidden
-				z-index: 1
-				>h2 
-					align-items: center
-					border-top: 1px $ice solid
-					border-bottom: 1px $ice solid
-					color: inherit
-					@extend .flex 
-					flex-flow: row wrap 
-					justify-content: space-between 
-					+rem('font-size', 16px)
-					margin: 0 -30px
-					padding: 25px
-					text-transform: uppercase
-					&::after 
-				        @extend .fa
-				        content: "\f107"
-				        color: $lightblue
-				        +rem(font-size, 16px) 
-				        flex: 0 0 auto
-				        text-align: center  
-				        width: 16px
-				>p
-					border-bottom: 1px $ice solid  
-					color: inherit
-					display: none
-					flex-flow: row wrap 
-					justify-content: space-between 					
-					max-width: initial 
-					margin: 0 -30px 
-					padding: 0 25px 25px 25px
-				&.-toggle
-					color: black 
-					border-left: 1px $lightblue solid 
-					border-right: 1px $lightblue solid  
-					+shadow(0px,0px,25px,-6px,black)
-					z-index: 2
-					>h2
-						border-bottom: 0
-						border-top-color: $lightblue
-						&::after 
-							content: "\f106"
-					>p  
-						border-bottom-color: $lightblue 
-						@extend .flex
-				&:last-child
-					border-radius: 0 0 8px 8px
-					margin-bottom: -40px
-					>p 
-						border-radius: 0 0 8px 8px
+				text-overflow: ellipsis					
+				white-space: nowrap
+				width: calc(100% - 30px)
+			&::after 
+				@extend .fa
+				content: "\f107"
+				color: $lightblue
+				+rem(font-size, 16px) 
+				flex: 0 0 auto
+				text-align: center  
+				width: 16px
+		>p 
+			font-family: 'BentonSansCond Book'
+			color: $mediumGray
+			display: none
+			+rem('font-size', 15px)
+			max-width: 100%
+			padding: 0 23px 23px
+
+	// 	&:first-child
+	// 		margin-bottom: 25px
+	// 		& ~ li 
+	// 			color: $ice
+	// 			cursor: pointer
+	// 			display: block 
+	// 			position: relative
+	// 			margin: 0 0 -1px
+	// 			overflow: hidden
+	// 			z-index: 1
+	// 			>h2 
+	// 				align-items: center
+	// 				border-top: 1px $ice solid
+	// 				border-bottom: 1px $ice solid
+	// 				color: inherit
+	// 				@extend .flex 
+	// 				flex-flow: row wrap 
+	// 				justify-content: space-between 
+	// 				+rem('font-size', 16px)
+	// 				margin: 0 -30px
+	// 				padding: 25px
+	// 				text-transform: uppercase
+
+	// 			>p
+	// 				border-bottom: 1px $ice solid  
+	// 				color: inherit
+	// 				display: none
+	// 				flex-flow: row wrap 
+	// 				justify-content: space-between 					
+	// 				max-width: initial 
+	// 				margin: 0 -30px 
+	// 				padding: 0 25px 25px 25px
+	// 			&.-toggle
+	// 				color: black 
+	// 				border-left: 1px $lightblue solid 
+	// 				border-right: 1px $lightblue solid  
+	// 				+shadow(0px,0px,25px,-6px,black)
+	// 				z-index: 2
+	// 				>h2
+	// 					border-bottom: 0
+	// 					border-top-color: $lightblue
+	// 					&::after 
+	// 						content: "\f106"
+	// 				>p  
+	// 					border-bottom-color: $lightblue 
+	// 					@extend .flex
+	// 			&:last-child
+	// 				border-radius: 0 0 8px 8px
+	// 				margin-bottom: -40px
+	// 				>p 
+	// 					border-radius: 0 0 8px 8px
 						
