@@ -5,8 +5,11 @@ function tabs(){
             tab.parent().find(".-active").not(tab).removeClass("-active");
             tab.addClass("-active");
 
+
             tab.closest(".tabs").find(".tab-content").children().removeClass("-active");
-            tab.closest(".tabs").find(".tab-content").children().eq(index).addClass("-active");
+            tab.closest(".tabs").find(".tab-content").children().eq(tab.index()).addClass("-active");
+
+
         });
     });
 }

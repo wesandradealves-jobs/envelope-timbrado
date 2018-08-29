@@ -57,8 +57,12 @@ input
     cursor: pointer
     display: inline-block
     +rem('font-size', 14px)
+    +mq(580px, max)
+        +rem('font-size', 12px)
     text-align: center 
     padding: 13px 25px
+    +mq(580px, max)
+        padding: 10px 16px
     text-transform: uppercase
     &-1
         background-color: $orange 

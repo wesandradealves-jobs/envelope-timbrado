@@ -221,6 +221,7 @@
         <div class="cart">
           <div class="cart-content tab-content">
             <div class="-active">
+              <!-- Cart -->
               <div class="cart-grid cart-header">
                 <div class="container">
                   <ul class="listing">
@@ -271,7 +272,7 @@
                             </p>
                         </li>
                         <li>
-                          <a href="javascript:void(0)" title="Remover" class="actions -remover"></a>
+                          <a href="javascript:void(0)" title="Remover" class="actions -remover" onclick="remover(this)"></a>
                         </li>
                       </ul>
                     </li>
@@ -306,7 +307,7 @@
                             </p>
                         </li>
                         <li>
-                          <a href="javascript:void(0)" title="Remover" class="actions -remover"></a>
+                          <a href="javascript:void(0)" title="Remover" class="actions -remover" onclick="remover(this)"></a>
                         </li>
                       </ul>
                     </li>
@@ -341,7 +342,7 @@
                             </p>
                         </li>
                         <li>
-                          <a href="javascript:void(0)" title="Remover" class="actions -remover"></a>
+                          <a href="javascript:void(0)" title="Remover" class="actions -remover" onclick="remover(this)"></a>
                         </li>
                       </ul>
                     </li>
@@ -376,7 +377,7 @@
                             </p>
                         </li>
                         <li>
-                          <a href="javascript:void(0)" title="Remover" class="actions -remover"></a>
+                          <a href="javascript:void(0)" title="Remover" class="actions -remover" onclick="remover(this)"></a>
                         </li>
                       </ul>
                     </li>
@@ -446,9 +447,10 @@
               </div>
             </div>
             <div>
+              <!-- Identificação -->
               <div class="container -login">
                 <!-- Não logado -->
-                <!-- <div class="columns">
+                <div class="columns">
                   <div class="column">
                     <form action="" class="forms">
                       <div class="column">
@@ -495,9 +497,9 @@
                       <span>Voltar para o carrinho</span>
                     </a>
                   </div>
-                </div> -->
+                </div> 
                 <!-- Logado -->
-                <div class="columns">
+                <!-- <div class="columns">
                     <div class="column -full-column">
                       <h4>Oi, Enio!</h4>
                       <p>Selecione abaixo o endereço que você deseja realizar a entrega:</p>
@@ -547,11 +549,166 @@
                         <span>Voltar para o carrinho</span>
                       </a>
                     </div>
-                  </div>
+                  </div> -->
               </div>
             </div>
-            <div></div>
-            <div></div>
+            <div>
+              <!-- Pagamento -->
+              <div class="payment">
+                <div>
+                  <div class="box">
+                    <h3>Suas informações</h3>
+                    <p>Quem irá receber o pedido</p>
+                    <div class="info-box">
+                      <p>
+                        <strong>
+                          ENIO DE OLIVEIRA<br/>
+                          enio@email.com.br<br/>
+                          CNPJ: 13.688.888/0001-88<br/>
+                          (54) 3030 2929                          
+                        </strong>
+                      </p>
+                      <a href="#" title="Editar" class="btn btn-5">Editar</a>
+                    </div>
+                    <h3>Entrega</h3>
+                    <p>O pedido será entregue no seguinte endereço:</p>     
+                    <div class="info-box">
+                      <p>
+                        <strong>
+                          RUA VINTE DE SETEMBRO, 2030,<br/>
+                          CEP 95035-115, BAIRRO CENTRO,<br/>
+                          CAXIAS DO SUL - RS   <br/>               
+                        </strong>
+                      </p>
+                      <a href="javascript:void(0)" onclick="modalOpen(this, 'endereco')" title="Editar" class="btn btn-5">Editar</a>
+                    </div>             
+                  </div>
+                </div>
+                <div>
+                  <div class="box">
+                    <h3>Escolha como pagar</h3>
+                    <ul class="payment-choices">
+                      <li>
+                        <input type="radio" name="payment_option" />
+                        <label for="">
+                          <span>
+                            <img src="assets/imgs/ico-cartao.png" alt="Cartão de Crédito">
+                          </span>
+                          <span>
+                            Cartão de crédito 
+                            <small>Em até 5x sem juros de R$ 234,00</small>
+                          </span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="radio" name="payment_option" />
+                        <label for="">
+                          <span>
+                            <img src="assets/imgs/ico-boleto.png" alt="Boleto Bancário">
+                          </span>
+                          <span>
+                            Boleto Bancário
+                            <small>10% de desconto: R$ 1.062,00</small>
+                          </span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="radio" name="payment_option" />
+                        <label for="">
+                          <span>
+                            <img src="assets/imgs/ico-bradesco.png" alt="DEPÓSITO BANCÁRIO BRADESCO">
+                          </span>
+                          <span>
+                            DEPÓSITO BANCÁRIO BRADESCO
+                            <small>10% de desconto: R$ 1.062,00</small>
+                          </span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="radio" name="payment_option" />
+                        <label for="">
+                          <span>
+                            <img src="assets/imgs/ico-pagseguro.png" alt="PAGSEGURO">
+                          </span>
+                          <span>
+                            PAGSEGURO
+                            <small>Em até 12x de R$ 117,00</small>
+                          </span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                  <div class="box">
+                    <h3>Resumo do pedido</h3>
+                    <ul class="order-summary">
+                      <li>
+                        <span>
+                          <img src="assets/imgs/11x23.png" alt="11x23" />
+                        </span>
+                        <span>
+                          <strong>ENVELOPE OFÍCIO JANELADO</strong>
+                          R$ 0,59 UN  |  QTD. 500  |  R$ 295,99   |   ENTREGA NORMAL<br/>FRETE: R$ 10,00
+                        </span>
+                      </li>
+                      <li>
+                        <span>
+                          <img src="assets/imgs/11x23.png" alt="11x23" />
+                        </span>
+                        <span>
+                          <strong>ENVELOPE OFÍCIO JANELADO</strong>
+                          R$ 0,59 UN  |  QTD. 500  |  R$ 295,99   |   ENTREGA NORMAL<br/>FRETE: R$ 10,00
+                        </span>
+                      </li>
+                      <li>
+                        <span>
+                          <img src="assets/imgs/11x23.png" alt="11x23" />
+                        </span>
+                        <span>
+                          <strong>ENVELOPE OFÍCIO JANELADO</strong>
+                          R$ 0,59 UN  |  QTD. 500  |  R$ 295,99   |   ENTREGA NORMAL<br/>FRETE: R$ 10,00
+                        </span>
+                      </li>
+                    </ul>
+                    <div class="order-summary-footer">
+                      <p><span>Desconto</span><span>R$ -10,00</span></p>
+                      <p><span>Total do Pedido</span><span class="order-total">R$ 1.1170,00</span></p>
+                      <a href="#" title="Finalizar compra" class="btn btn-1 -action">
+                        <span>Finalizar compra</span>
+                        <i class="fa fa-angle-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <!-- Conclusão -->
+              <div class="order-conclusion">
+                <h5>
+                    Parabéns!<br/>
+                    Seu pedido foi efetuado<br/>
+                    com sucesso!
+                </h4>
+                <div class="order-conclusion-code">
+                  <p class="order-code">
+                    <span class="order-code-box">CÓDIGO 09849879</span>
+                  </p>
+                  <p>
+                      Processaremos seu pedido assim que recebermos a confirmação do pagamento, que pode ocorrer em até 3 dias úteis. 
+                      <br/><br/>
+                      Agradecemos a preferência e ficamos à disposição em caso de dúvidas ou sugestões.
+                      <br/><br/>
+                      Você também poderá acompanhar o seu pedido na área Minha conta.
+                  </p>
+                </div>
+                <a href="index.html" title="Voltar para o início" class="btn btn-5 -action">
+                  <i class="fa fa-angle-left"></i>
+                  <span>Voltar para o início</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </main>
@@ -736,7 +893,7 @@
     </footer>
     <!-- Modal -->
     <div class="modal">
-      <div class="modal-inner">
+      <div class="modal-inner tabs">
         <div class="modal-inner-header">
           <h3></h3>
           <a href="javascript:void(0)" onclick="modalClose(this)" title="Fechar" class="close">
