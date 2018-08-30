@@ -298,10 +298,13 @@
 											text-align: center
 										p
 											color: black!important
+											font-family: 'CircularStd'
 											+rem(('font-size':16px, 'line-height':22px !important))
 										h4 
 											+rem(('font-size':29px, 'line-height':32px !important))
 											margin-top: 10px
+											span 
+												+rem('font-size', 20px)
 									.btn-4
 										+border(8px)
 										margin: 14px auto 
@@ -341,14 +344,21 @@
 												justify-content: space-between
 												flex: 1
 												.order-choices
+													font-family: 'CircularStd'
 													flex: 1
 													>* 
 														label 
+															font-family: 'CircularStd'
 															padding-bottom: 0
 															+mq(737px, max)
 																padding-bottom: 25px
-												h3 
-													flex: 0 0 auto 
+													h3 
+														font-family: 'CircularStd'
+														flex: 0 0 auto 
+													p
+														font-family: 'CircularStd'
+													input 
+														font-family: 'CircularStd'
 												&:first-child
 													flex: 0 0 auto
 													padding-right: 15px 
@@ -373,11 +383,13 @@
 																margin-top: 10px
 																padding-top: 10px
 									h3
+										font-family: 'BentonSansCond'
 										margin-bottom: 15px
 									.order-choices
 										align-items: stretch
 										@extend .flex
 										flex-flow: row wrap 
+										font-family: 'CircularStd'
 										justify-content: space-between
 										>*
 											flex: 0 0 auto 
@@ -423,6 +435,7 @@
 														small
 															border-bottom: 0
 															color: $mediumGray
+															font-family: 'BentonSansCond'
 															margin-bottom: 0
 															padding: 10px 0
 													input 
@@ -472,6 +485,8 @@
 											input[type="checkbox"]
 												cursor: pointer
 												display: block 
+												font-family: 'CircularStd'
+												font-weight: 800
 												height: 100%
 												left: 0
 												outline: none
@@ -492,6 +507,7 @@
 											label  
 												align-items: center
 												@extend .flex 
+												font-family: 'CircularStd'
 												flex-flow: column wrap 
 												justify-content: center 
 												border: 3px rgba(0,0,0,0) solid
@@ -505,6 +521,7 @@
 												h2  
 													+rem('font-size', 40px)
 													display: block 
+													font-family: 'CircularStd'
 													small  
 														border-bottom: 2px $softGray solid
 														color: $mediumGray
@@ -514,6 +531,7 @@
 														+rem('font-size', 15px)
 												p  
 													+rem('font-size', 18px!important)
+													font-family: 'CircularStd'
 													small 
 														display: block 
 														+rem('font-size', 10px)
@@ -521,6 +539,7 @@
 										align-items: stretch
 										@extend .flex
 										flex-flow: row wrap 
+										font-family: 'CircularStd'
 										justify-content: space-between
 										>*
 											flex: 1
@@ -553,6 +572,7 @@
 													width: 47px
 												p 
 													color: black!important
+													font-family: 'CircularStd'
 													+rem(('font-size':24px!important,'line-height':32px!important))
 													padding-left: 27px
 													flex: 1
@@ -563,12 +583,16 @@
 													span 
 														color: $mediumGray!important
 														display: block 
+														font-family: 'BentonSansCond'
 														+rem('font-size', 15px!important)
 														margin: 15px 0 0
 													.btn-3
+														display: block
+														font-family: 'CircularStd'
 														+border(8px)
 														+rem('font-size', 14px)
 														margin: 15px 0 0
+														max-width: 205px
 														padding: 10px 15px
 												&:hover
 													+shadow(0px,0px,20px,-10px,black)

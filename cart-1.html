@@ -25,7 +25,7 @@
       <header class="header">
         <div class="container">
           <h1 class="logo">
-            <a href="#" title="">
+            <a href="index.html" title="Envelope Timbrado">
               <img src="assets/imgs/logo.svg" alt="">
             </a>
           </h1>
@@ -47,7 +47,7 @@
           <nav class="main-nav">
             <ul>
               <li>
-                <a href="cart.html" title="">
+                <a href="cart.html" title="Carrinho de Compras">
                   <i class="icon cart">
                       <?xml version="1.0" encoding="UTF-8"?>
                       <svg width="23px" height="25px" viewBox="0 0 23 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -79,7 +79,7 @@
                 </a>
               </li>
               <li>
-                <a href="javascript:void(0)" onclick="modalOpen(this, 'login')" title="">
+                <a href="javascript:void(0)" onclick="modalOpen(this, 'login')" title="Meus Pedidos">
                   <i class="icon profile">
                       <?xml version="1.0" encoding="UTF-8"?>
                       <svg width="21px" height="24px" viewBox="0 0 21 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -111,7 +111,7 @@
                 </a>
               </li>
               <li>
-                <a href="" title="">
+                <a href="fale-conosco.html" title="Atendimento">
                   <i class="icon sac">
                       <?xml version="1.0" encoding="UTF-8"?>
                       <svg width="27px" height="27px" viewBox="0 0 27 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -153,7 +153,7 @@
             <ul>
               <li>
                 <div>
-                  <a href="" title="">
+                  <a href="single.html" title="Envelope">
                       <img src="assets/imgs/26x36.png" title=""/>
                       <span>Envelope<span>
                   </a>
@@ -161,7 +161,7 @@
               </li>
               <li>
                 <div>
-                    <a href="" title="">
+                    <a href="single.html" title="Envelope">
                         <img src="assets/imgs/24x34.png" title=""/>
                         <span>Envelope<span>
                     </a>
@@ -169,7 +169,7 @@
               </li>
               <li>
                 <div>
-                    <a href="" title="">
+                    <a href="single.html" title="Envelope">
                         <img src="assets/imgs/32x22.png" title=""/>
                         <span>Envelope Médio<span>
                     </a>
@@ -177,7 +177,7 @@
               </li>
               <li>
                 <div>
-                    <a href="" title="">
+                    <a href="single.html" title="Envelope">
                         <img src="assets/imgs/11x23.png" title=""/>
                         <span>Envelope Ofício<span>
                     </a>
@@ -185,7 +185,7 @@
               </li>
               <li>
                 <div>
-                    <a href="" title="">
+                    <a href="single.html" title="Envelope">
                         <img src="assets/imgs/11x23.png" title=""/>
                         <span>Envelope Ofício Janelado<span>
                     </a>
@@ -193,7 +193,7 @@
               </li>
               <li>
                 <div>
-                    <a href="" title="">
+                    <a href="single.html" title="Envelope">
                         <img src="assets/imgs/18x25.png" title=""/>
                         <span>Envelope<span>
                     </a>
@@ -203,8 +203,8 @@
           </div>
         </nav>
       </header>
-      <main class="main tabs">
-        <ul class="cart-steps tab-navigation">
+      <main class="main">
+        <ul class="cart-steps">
           <li class="-active">
             <span>01</span> <span>Carrinho de Compras</span>
           </li>
@@ -219,9 +219,9 @@
           </li>
         </ul>
         <div class="cart">
-          <div class="cart-content tab-content">
-            <div class="-active">
-              <!-- Cart -->
+          <div class="cart-content">
+            <!-- Cart -->
+            <div id="cart">
               <div class="cart-grid cart-header">
                 <div class="container">
                   <ul class="listing">
@@ -381,332 +381,71 @@
                         </li>
                       </ul>
                     </li>
-                </ul>
+                  </ul>
                   <!--  -->
                 </div>
               </div>
               <!--  -->
               <div class="cart-totals">
-                <div>
-                  <span>
-                    <p><strong>Subtotal</strong></p></span>
-                    <span><h4><strong>R$ 263,20</strong></h4>
-                  </span>
-                </div>
-                <div>
-                  <span>
-                    <p>
-                      <strong>Cupom de desconto</strong>
-                      Você possui algum cupom de desconto? Digite o código abaixo
-                    </p>
-                    <form class="cupom-form">
-                      <span>
-                        <input type="text" placeholder="LANC10"/>
-                      </span>
-                      <span>
-                        <button>Ok</button>
-                      </span>
-                    </form>
-                  </span>
-                  <span>
-                    <h4>-R$10,00</h4>
-                  </span>
-                </div>
-                <div>
-                  <span>
-                    <p><strong>Total do pedido</strong></p>
-                  </span>
-                  <span>
-                    <h4 class="total-value"><strong>R$ 1.1170,00</strong></h4>
-                    <p>
-                      <b>5x</b> sem juros <b>R$ 234,00</b><br/>
-                      ou <b>R$ 1.062,00</b> à vista <b>(10% de desconto)</b>
-                    </p>
-                  </span>
-                </div>
-                <div class="cart-totals-footer">
-                  <span>
-                    <a href="" title="Escolher mais envelopes" class="btn btn-5 -action">
-                      <i class="fa fa-angle-left"></i>
-                      <span>Escolher mais envelopes</span>
-                    </a>
-                  </span>
-                  <span>
-                    <a href="" title="Imprimir orçamento" class="btn btn-5 -action">
-                      <i class="fa fa-print"></i>
-                      <span>Imprimir orçamento</span>
-                    </a>
-                  </span>
-                  <span>
-                    <a href="" title="Continuar" class="btn btn-1 -action">
-                      <span>Continuar</span>
-                      <i class="fa fa-angle-right"></i>
-                    </a>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div>
-              <!-- Identificação -->
-              <div class="container -login">
-                <!-- Não logado -->
-                <div class="columns">
-                  <div class="column">
-                    <form action="" class="forms">
-                      <div class="column">
-                        <span>
-                          <h3>É a sua primeira compra aqui?</h3>
-                        </span>
-                        <span>
-                          <input type="email" placeholder="Seu E-mail" />
-                        </span>
-                        <span>
-                          <button class="btn btn-1 -action">
-                            <span>Continuar</span>
-                            <i class="fa fa-angle-right"></i>
-                          </button>
-                        </span>
-                      </div>
-                    </form>
+                <div class="container">
+                  <div>
+                    <span>
+                      <p><strong>Subtotal</strong></p></span>
+                      <span><h4><strong>R$ 263,20</strong></h4>
+                    </span>
                   </div>
-                  <div class="column">
-                    <form action="" class="forms">
-                      <div class="column">
+                  <div>
+                    <span>
+                      <p>
+                        <strong>Cupom de desconto</strong>
+                        Você possui algum cupom de desconto? Digite o código abaixo
+                      </p>
+                      <form class="cupom-form">
                         <span>
-                          <h3>Já comprou aqui antes?</h3>
+                          <input type="text" placeholder="LANC10"/>
                         </span>
                         <span>
-                          <input type="email" placeholder="Seu E-mail" />
+                          <button>Ok</button>
                         </span>
-                        <span>
-                          <input type="password" placeholder="*******" />
-                        </span>
-                        <span>
-                          <button class="btn btn-1 -action">
-                            <span>Continuar</span>
-                            <i class="fa fa-angle-right"></i>
-                          </button>
-                          <p><a href="" title="Esqueceu sua senha?">Esqueceu seua senha?</a></p>
-                        </span>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="column">
-                    <a href="cart.html" title="Voltar para o carrinho" class="btn btn-5 -action">
-                      <i class="fa fa-angle-left"></i>
-                      <span>Voltar para o carrinho</span>
-                    </a>
-                  </div>
-                </div> 
-                <!-- Logado -->
-                <!-- <div class="columns">
-                    <div class="column -full-column">
-                      <h4>Oi, Enio!</h4>
-                      <p>Selecione abaixo o endereço que você deseja realizar a entrega:</p>
-                      <form action="" class="select-addresses">
-                        <ul>
-                          <li>
-                              <input name="chosen_address" type="radio">
-                              <label>
-                                <span>
-                                    <strong>
-                                      RUA VINTE DE SETEMBRO, 3020, APTO 54.<br/>
-                                      CEP 95020-450, BAIRRO CENTRO, CAXIAS DO SUL - RS
-                                    </strong>
-                                </span>
-                                <span>
-                                  <a href="javascript:void(0)" onclick="modalOpen(this, 'endereco')" title="Alterar endereço">Alterar endereço</a>
-                                </span>
-                              </label>
-                          </li>
-                          <li>
-                              <input name="chosen_address" type="radio">
-                              <label>
-                                <span>
-                                    <strong>
-                                      RUA VINTE DE SETEMBRO, 3020, APTO 54.<br/>
-                                      CEP 95020-450, BAIRRO CENTRO, CAXIAS DO SUL - RS
-                                    </strong>
-                                </span>
-                                <span>
-                                  <a href="javascript:void(0)" onclick="modalOpen(this, 'endereco')" title="Alterar endereço">Alterar endereço</a>
-                                </span>
-                              </label>
-                          </li>
-                        </ul>
                       </form>
-                    </div>
-                    <div class="column -full-column">
-                      <a href="javascript:void(0)" onclick="modalOpen(this, 'cadastro')" title="Cadastrar novo endereço" class="btn btn-5">
-                        <span>Cadastrar novo endereço</span>
+                    </span>
+                    <span>
+                      <h4>-R$10,00</h4>
+                    </span>
+                  </div>
+                  <div>
+                    <span>
+                      <p><strong>Total do pedido</strong></p>
+                    </span>
+                    <span>
+                      <h4 class="total-value"><strong>R$ 1.1170,00</strong></h4>
+                      <p>
+                        <b>5x</b> sem juros <b>R$ 234,00</b><br/>
+                        ou <b>R$ 1.062,00</b> à vista <b>(10% de desconto)</b>
+                      </p>
+                    </span>
+                  </div>
+                  <div class="cart-totals-footer">
+                    <span>
+                      <a href="" title="Escolher mais envelopes" class="btn btn-5 -action">
+                        <i class="fa fa-angle-left"></i>
+                        <span>Escolher mais envelopes</span>
                       </a>
-                      <a href="" title="Continuar" class="btn btn-5 -action">
+                    </span>
+                    <span>
+                      <a href="" title="Imprimir orçamento" class="btn btn-5 -action">
+                        <i class="fa fa-print"></i>
+                        <span>Imprimir orçamento</span>
+                      </a>
+                    </span>
+                    <span>
+                      <a href="" title="Continuar" class="btn btn-1 -action">
                         <span>Continuar</span>
                         <i class="fa fa-angle-right"></i>
                       </a>
-                      <a href="cart.html" title="Voltar para o carrinho" class="btn btn-5 -action">
-                        <i class="fa fa-angle-left"></i>
-                        <span>Voltar para o carrinho</span>
-                      </a>
-                    </div>
-                  </div> -->
-              </div>
-            </div>
-            <div>
-              <!-- Pagamento -->
-              <div class="payment">
-                <div>
-                  <div class="box">
-                    <h3>Suas informações</h3>
-                    <p>Quem irá receber o pedido</p>
-                    <div class="info-box">
-                      <p>
-                        <strong>
-                          ENIO DE OLIVEIRA<br/>
-                          enio@email.com.br<br/>
-                          CNPJ: 13.688.888/0001-88<br/>
-                          (54) 3030 2929                          
-                        </strong>
-                      </p>
-                      <a href="#" title="Editar" class="btn btn-5">Editar</a>
-                    </div>
-                    <h3>Entrega</h3>
-                    <p>O pedido será entregue no seguinte endereço:</p>     
-                    <div class="info-box">
-                      <p>
-                        <strong>
-                          RUA VINTE DE SETEMBRO, 2030,<br/>
-                          CEP 95035-115, BAIRRO CENTRO,<br/>
-                          CAXIAS DO SUL - RS   <br/>               
-                        </strong>
-                      </p>
-                      <a href="javascript:void(0)" onclick="modalOpen(this, 'endereco')" title="Editar" class="btn btn-5">Editar</a>
-                    </div>             
+                    </span>
                   </div>
                 </div>
-                <div>
-                  <div class="box">
-                    <h3>Escolha como pagar</h3>
-                    <ul class="payment-choices">
-                      <li>
-                        <input type="radio" name="payment_option" />
-                        <label for="">
-                          <span>
-                            <img src="assets/imgs/ico-cartao.png" alt="Cartão de Crédito">
-                          </span>
-                          <span>
-                            Cartão de crédito 
-                            <small>Em até 5x sem juros de R$ 234,00</small>
-                          </span>
-                        </label>
-                      </li>
-                      <li>
-                        <input type="radio" name="payment_option" />
-                        <label for="">
-                          <span>
-                            <img src="assets/imgs/ico-boleto.png" alt="Boleto Bancário">
-                          </span>
-                          <span>
-                            Boleto Bancário
-                            <small>10% de desconto: R$ 1.062,00</small>
-                          </span>
-                        </label>
-                      </li>
-                      <li>
-                        <input type="radio" name="payment_option" />
-                        <label for="">
-                          <span>
-                            <img src="assets/imgs/ico-bradesco.png" alt="DEPÓSITO BANCÁRIO BRADESCO">
-                          </span>
-                          <span>
-                            DEPÓSITO BANCÁRIO BRADESCO
-                            <small>10% de desconto: R$ 1.062,00</small>
-                          </span>
-                        </label>
-                      </li>
-                      <li>
-                        <input type="radio" name="payment_option" />
-                        <label for="">
-                          <span>
-                            <img src="assets/imgs/ico-pagseguro.png" alt="PAGSEGURO">
-                          </span>
-                          <span>
-                            PAGSEGURO
-                            <small>Em até 12x de R$ 117,00</small>
-                          </span>
-                        </label>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div>
-                  <div class="box">
-                    <h3>Resumo do pedido</h3>
-                    <ul class="order-summary">
-                      <li>
-                        <span>
-                          <img src="assets/imgs/11x23.png" alt="11x23" />
-                        </span>
-                        <span>
-                          <strong>ENVELOPE OFÍCIO JANELADO</strong>
-                          R$ 0,59 UN  |  QTD. 500  |  R$ 295,99   |   ENTREGA NORMAL<br/>FRETE: R$ 10,00
-                        </span>
-                      </li>
-                      <li>
-                        <span>
-                          <img src="assets/imgs/11x23.png" alt="11x23" />
-                        </span>
-                        <span>
-                          <strong>ENVELOPE OFÍCIO JANELADO</strong>
-                          R$ 0,59 UN  |  QTD. 500  |  R$ 295,99   |   ENTREGA NORMAL<br/>FRETE: R$ 10,00
-                        </span>
-                      </li>
-                      <li>
-                        <span>
-                          <img src="assets/imgs/11x23.png" alt="11x23" />
-                        </span>
-                        <span>
-                          <strong>ENVELOPE OFÍCIO JANELADO</strong>
-                          R$ 0,59 UN  |  QTD. 500  |  R$ 295,99   |   ENTREGA NORMAL<br/>FRETE: R$ 10,00
-                        </span>
-                      </li>
-                    </ul>
-                    <div class="order-summary-footer">
-                      <p><span>Desconto</span><span>R$ -10,00</span></p>
-                      <p><span>Total do Pedido</span><span class="order-total">R$ 1.1170,00</span></p>
-                      <a href="#" title="Finalizar compra" class="btn btn-1 -action">
-                        <span>Finalizar compra</span>
-                        <i class="fa fa-angle-right"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <!-- Conclusão -->
-              <div class="order-conclusion">
-                <h5>
-                    Parabéns!<br/>
-                    Seu pedido foi efetuado<br/>
-                    com sucesso!
-                </h4>
-                <div class="order-conclusion-code">
-                  <p class="order-code">
-                    <span class="order-code-box">CÓDIGO 09849879</span>
-                  </p>
-                  <p>
-                      Processaremos seu pedido assim que recebermos a confirmação do pagamento, que pode ocorrer em até 3 dias úteis. 
-                      <br/><br/>
-                      Agradecemos a preferência e ficamos à disposição em caso de dúvidas ou sugestões.
-                      <br/><br/>
-                      Você também poderá acompanhar o seu pedido na área Minha conta.
-                  </p>
-                </div>
-                <a href="index.html" title="Voltar para o início" class="btn btn-5 -action">
-                  <i class="fa fa-angle-left"></i>
-                  <span>Voltar para o início</span>
-                </a>
               </div>
             </div>
           </div>
@@ -773,21 +512,21 @@
             <ul>
               <li>
                 <ul class="nav">
-                  <li><a href="" title="">Sobre a Envelope Timbrado</a></li>
-                  <li><a href="" title="">Perguntas frequentes</a></li>
-                  <li><a href="" title="">Produtos</a></li>
-                  <li><a href="" title="">Fale conosco</a></li>
-                  <li><a href="" title="">Carrinho de compras</a></li>
-                  <li><a href="" title="">Sua conta</a></li>
+                  <li><a href="sobre.html" title="Sobre a Envelope Timbrado">Sobre a Envelope Timbrado</a></li>
+                  <li><a href="perguntas-frequentes.html" title="Perguntas frequentes">Perguntas frequentes</a></li>
+                  <li><a href="#" title="Produtos">Produtos</a></li>
+                  <li><a href="fale-conosco.html" title="Fale conosco">Fale conosco</a></li>
+                  <li><a href="cart.html" title="Carrinho de compras">Carrinho de compras</a></li>
+                  <li><a href="sua-conta.html" title="Sua conta">Sua conta</a></li>
                 </ul>
               </li>
               <li>
                 <ul class="nav">
-                  <li><a href="" title="">Antes da compra</a></li>
-                  <li><a href="" title="">Comprando</a></li>
-                  <li><a href="" title="">Formas de pagamento</a></li>
-                  <li><a href="" title="">Envio</a></li>
-                  <li><a href="" title="">Após a compra</a></li>
+                  <li><a href="perguntas-frequentes.html" title="Antes da compra">Antes da compra</a></li>
+                  <li><a href="perguntas-frequentes.html" title="Comprando">Comprando</a></li>
+                  <li><a href="perguntas-frequentes.html" title="Formas de pagamento">Formas de pagamento</a></li>
+                  <li><a href="perguntas-frequentes.html" title="Envio">Envio</a></li>
+                  <li><a href="perguntas-frequentes.html" title="Após a compra">Após a compra</a></li>
                 </ul>
               </li>
               <li>
@@ -860,10 +599,10 @@
                 <p><strong>Redes Sociais</strong></p>
                 <ul class="footer-horizontal-list">
                   <li>
-                    <a href="" title="Instagram"><i class="fa fa-instagram"></i></a>
+                    <a href="#" title="Instagram"><i class="fa fa-instagram"></i></a>
                   </li>
                   <li>
-                    <a href="" title="Facebook"><i class="fa fa-facebook-f"></i></a>
+                    <a href="#" title="Facebook"><i class="fa fa-facebook-f"></i></a>
                   </li>
                 </ul>
                 <p><strong>Compra 100% Segura</strong></p>
