@@ -117,6 +117,15 @@
 								+mq(640px, max)
 									flex: 0 0 auto				
 			.tabs
+				&.sticky
+					+mq(1336px, min)
+						.config 
+							display: block 
+							position: relative 
+							padding-right: 320px
+							&-sidebar 
+								position: fixed 
+								top: 110px
 				.tab-content
 					>* 
 						background-color: $lightgray
@@ -260,6 +269,7 @@
 								@extend .flex
 								flex-flow: row wrap 
 								justify-content: space-between
+								position: relative
 								.config-sidebar 
 									background-color: white 
 									+border(8px)
@@ -273,6 +283,8 @@
 									width: 320px
 									+mq(940px, max)
 										width: 100%
+									&.sticky
+										opacity: .5
 									>* 
 										padding-left: 25px 
 										padding-right: 25px

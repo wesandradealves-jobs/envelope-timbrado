@@ -37,7 +37,7 @@ $(document).ready(function () {
 
 			item.toggleClass("-active");
 
-			item.closest(".gallery").find(bigImage).attr({"style" : "background-image:url("+ image +")", "data-magnify-src" : image});
+			item.closest(".gallery").find(bigImage).attr({"style" : "background-image:url("+ image +")"});
 		});
 	}), gallery.closest(".gallery").find(nav).each(function( index ) {
 		var nav = $(this),
@@ -45,15 +45,15 @@ $(document).ready(function () {
 			counter = parseInt(data.attr("data-scroll")),
 			galHeight = nav.closest(".gallery").find(gallery).outerHeight(),
 			item = gallery.find(items),
-			limit = item.length * item.outerHeight();
+			limit = parseInt(item.outerHeight()) * item.length;
 
 		nav.click(function() {
             if(index == 1){
 				if(parseInt(-data.attr("data-scroll")) >= -limit)
-					data.attr("data-scroll", (parseInt(data.attr("data-scroll")) + item.outerHeight()));
+					data.attr("data-scroll", (parseInt(data.attr("data-scroll")) + (item.outerHeight() + 15)));
             } else {
 				if(parseInt(data.attr("data-scroll")) >= item.outerHeight())
-					data.attr("data-scroll", (parseInt(data.attr("data-scroll")) - item.outerHeight()));
+					data.attr("data-scroll", (parseInt(data.attr("data-scroll")) - (item.outerHeight() + 15)));
 				else 
 					data.attr("data-scroll", 0)
 			} 
