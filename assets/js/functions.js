@@ -464,6 +464,26 @@ $(document).ready(function () {
         dots: true,
         navText: ["<i class='owl-prev-arrow'><img src='assets/imgs/thin-arrow.png'/></i>","<i class='owl-next-arrow'><img src='assets/imgs/thin-arrow.png'/></i>"]
     });
+    $('.owl-carousel.porque-slider').owlCarousel({
+        loop: false,
+        margin: 70,
+        nav: true,
+        navText: ["<i class='owl-prev-arrow fa fa-angle-left'></i>","<i class='owl-next-arrow fa fa-angle-right'></i>"],
+        responsive:{
+            0:{
+                items: 1
+            },
+            736:{
+                items: 2
+            },
+            990:{
+                items: 3
+            },
+            1280:{
+                items: 4
+            }
+        }
+    });
     $('.owl-slideshow.tab-slide').owlCarousel({
         items: 1,
         nav: true,
@@ -488,5 +508,15 @@ $(document).ready(function () {
     $("[name*='qti_choice']").click(function() {
         $(this).closest("ul").find("#randomQti").val("")
     });
+    if($(".side-navigation").length)
+        var el = $(".side-navigation"),
+            page = $('body').attr('class').split(" ")[0];
+
+        $('.side-navigation li[class]').each(function ea(){
+            for (var i = 0; i < el.children().length; i++) {
+                if($(this).attr("class") == page)
+                    $(this).addClass("-active")
+            }
+        });
 });
 
