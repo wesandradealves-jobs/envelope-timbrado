@@ -3,80 +3,60 @@
         margin-bottom: 30px
 
 .porque-comprar
-    &:hover
-        .porque-slider-nav
-            >*
-                opacity: 1
-                &:first-child
-                    left: 0
-                &:last-child
-                    right: 0
     .porque-slider
-        align-items: stretch
-        @extend .flex
-        flex-flow: row wrap 
-        justify-content: space-between
         margin-top: 25px
-        &-nav
-            align-items: center
-            @extend .flex
-            +mq(1048px, max)
-                display: none
-            justify-content: space-between
-            left: 0 
-            position: absolute
-            top: 50%
-            width: 100%
-            >*
-                +transition(1000ms)
-                opacity: 0
-                +mq(1280px, max)
-                    opacity: 1
-                &:first-child
-                    left: -80px
-                    +mq(1280px, max)
-                        left: 30px
-                &:last-child
-                    right: -80px
-                    +mq(1280px, max)
-                        right: 30px
-            button
-                background-color: transparent
-                color: $lightblue
-                cursor: pointer
-                +rem('font-size', 45px)
+        padding: 0 50px
+        position: relative
         &::after
             +border(999px)
             background-color: lighten($darkenGray, 3%)
             content: ""
             display: block 
-            +mq(1048px, max)
-                display: none
             height: 102px
-            left: 130px
+            left: calc(50% - 1140px/2)
+            +mq(990px, max)
+                left: calc(50% - 85%/2)  
             position: absolute
             top: 0
             z-index: 1
-            width: calc(100% - 260px)
-        >*
-            align-items: flex-start
-            @extend .flex
-            flex-flow: column wrap
-            justify-content: flex-start 
-            flex: 1
-            +mq(1048px, max)
-                flex: 0 0 auto 
-                width: 100%
-            padding: 0 70px
-            +mq(1048px, max)
-                padding: 0 0
-                &:not(:last-child)
-                    margin-bottom: 70px
-            position: relative
-            text-align: center
+            width: 1140px
+            +mq(990px, max)
+                width: 85%
+        &:hover 
+            .owl-nav 
+                +mq(1280px, min)
+                    [class*=owl-]
+                        opacity: 1 
+        .owl-dots 
+            margin-top: 30px
+        .owl-nav 
+            align-items: center 
+            display: none 
+            +mq(1280px, min)
+                display: flex 
+            flex-flow: row wrap 
+            justify-content: space-between
+            left: 0
+            position: absolute 
+            top: calc(50% - 47px/2)
+            width: 100%
+            z-index: 3
+            [class*=owl-]
+                background: transparent!important
+                color: $lightblue
+                flex: 0 0 auto
+                outline: 0
+                line-height: 1
+                opacity: 0
+                padding: 0 
+                position: relative
+                +transition(500ms)
+                +rem('font-size', 47px)
+        .owl-stage-outer
+            position: relative 
             z-index: 2
-            &:hover,
-            &.-active
+        .owl-item
+            &:hover
                 .porque-slider-ico
                     background-color: $lightblue
                     +shadow(0px,0px,0px,20px,white)
@@ -85,7 +65,26 @@
                 .porque-slider-title
                     color: $defaultblue
                     &+p
-                        color: $gray
+                        color: $gray                   
+            +mq(1280px, max)
+                &.active
+                    .porque-slider-ico
+                        background-color: $lightblue
+                        +shadow(0px,0px,0px,20px,white)
+                        +mq(1048px, max)
+                            +shadow(0px,0px,0px,0px,black)
+                    .porque-slider-title
+                        color: $defaultblue
+                        &+p
+                            color: $gray                
+        .item
+            align-items: flex-start
+            @extend .flex
+            flex-flow: column wrap
+            justify-content: flex-start 
+            position: relative
+            text-align: center
+            z-index: 2
             .porque-slider-ico
                 align-items: center
                 +border(999px)
@@ -99,6 +98,9 @@
                 +shadow(0px,0px,0px,0px,white) 
                 +transition(500ms)
                 width: 102px
+                img 
+                    width: auto
+                    max-width: 100%
                 >* 
                     position: relative
                     z-index: 1
@@ -111,8 +113,4 @@
                 &+p 
                     color: $mediumGray
                     flex: 10
-                    +rem('font-size', 14px)
-                    +mq(1048px, max)
-                        display: block 
-                        margin: 0 auto
-                        flex: 0 0 auto 
+                    +rem(('font-size':14px,'line-height':19px))

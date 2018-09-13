@@ -348,7 +348,6 @@ i
     word-wrap: break-word
     word-break: break-all
     +mq(1080px, max)
-        margin: 25px 0
         text-align: center
 
 .custom-select
@@ -367,13 +366,14 @@ i
         @extend .fa
         content: "\f107" 
         display: block 
-        +rem('font-size', 16px)
+        +rem('font-size', )
         padding: 0 15px
         position: absolute 
         right: 0
         top: calc(50% - 16px/2)
         z-index: 2
     >select 
+        background-color: transparent
         color: $mediumGray
         outline: none!important
         position: relative
@@ -507,6 +507,10 @@ i
                     border-left: 0px
                     border-right: 0px
                     height: 55px
+                    padding: 0 12px
+                    select
+                        padding: 15px 0
+                        +rem('font-size', 15px)
                 >*
                     flex: 1
                     &:first-child,

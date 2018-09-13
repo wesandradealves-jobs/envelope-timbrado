@@ -9,17 +9,17 @@ function execmascara(){
 function soLetras(v){
     return v.replace(/\d/g,"") //Remove tudo o que não é Letra
 }
-function sendWPP(e){   
+function sendWPP(e){
     var e = $(e);
     // var telefone = "5521997983711";
     // var saudacao = "Olá! Meu nome é";
     // var name = document.getElementById("user_nome").value;
     // var email = document.getElementById("user_email").value;
-    // var msg = document.getElementById("user_msg").value;		
-    // var saudacaoencode = encodeURI(saudacao);		
+    // var msg = document.getElementById("user_msg").value;
+    // var saudacaoencode = encodeURI(saudacao);
     // var url_base = "https://api.whatsapp.com/send?phone=" + telefone + "&text=" + saudacaoencode + "%20" + encodeURI(name) + "%20e%20" + encodeURI(msg);
     window.open(url_base)
-}   
+}
 function envelopes(e){
     var e = $(e);
     $(".envelope-nav").toggleClass("-on");
@@ -30,21 +30,21 @@ function showDetails(e){
     e.closest(".order-list-item").toggleClass("-toggle")
     .find(".order-list-details").toggle();
 
-    e.find(".fa-angle-down").toggleClass("fa-angle-up");
+    e.find("[class*='angle-']").toggleClass("fa-angle-down").toggleClass("fa-angle-up");
 }
 function showAddress(e){
     var e = $(e);
     e.closest(".address-item").toggleClass("-toggle")
     .find(".addres-item-details").toggleClass("-toggle");
 
-    e.find(".fa-angle-down").toggleClass("fa-angle-up");
+    e.find("[class*='angle-']").toggleClass("fa-angle-down").toggleClass("fa-angle-up");
 }
 function checkBlur(){
     if($("body .modal.-toggle").length){
         $("#wrap").addClass("-blur");
     } else {
         $("#wrap").removeClass("-blur");
-    }    
+    }
 }
 function modalClose(e){
     var e = $(e);
@@ -79,7 +79,7 @@ function modalOpen(e, post){
                   html += '<input type="email" placeholder="Seu e-mail">';
                 html += '</span>';
                 html += '<span>';
-                  html += '<input type="password" placeholder="Sua senha">'; 
+                  html += '<input type="password" placeholder="Sua senha">';
                 html += '</span>';
                 html += '<span>';
                   html += '<button class="btn btn-1"><span>Acessar</span></button>';
@@ -130,7 +130,7 @@ function modalOpen(e, post){
                 html += '    <span class="custom-select">';
                 html += '        <select class="estados" name="">';
                 html += '        </select>';
-                html += '    </span> '; 
+                html += '    </span> ';
                 html += '  </span>';
                 html += '</span>';
                 html += '<span class="numero-complemento -telefone">';
@@ -178,11 +178,11 @@ function modalOpen(e, post){
                         html += '  </span>';
                         html += '<span>';
                             html += '  <label for="">Senha</label>';
-                            html += '<input type="password" >'; 
+                            html += '<input type="password" >';
                         html += '</span>';
                         html += '<span>';
                             html += '  <label for="">Confirme sua senha</label>';
-                            html += '<input type="password" >'; 
+                            html += '<input type="password" >';
                         html += '</span>';
                         html += '</div>';
                         html += '<div class="column">';
@@ -225,7 +225,7 @@ function modalOpen(e, post){
                         html += '    <span class="custom-select">';
                         html += '        <select class="estados" name="">';
                         html += '        </select>';
-                        html += '    </span> '; 
+                        html += '    </span> ';
                         html += '  </span>';
                         html += '</span>';
                         html += '<span class="numero-complemento -telefone">';
@@ -241,7 +241,7 @@ function modalOpen(e, post){
                         html += '<span>';
                         html += '    <button class="btn btn-1 -action"><span>Finalizar cadastro</span> <i class="fa fa-angle-right"></i></button>';
                         html += '</span>';
-                        html += '</div>'; 
+                        html += '</div>';
                         html += '</form>'
                     html += '</div>';
                     html += '<div class="">';
@@ -265,11 +265,11 @@ function modalOpen(e, post){
                     html += '  </span>';
                         html += '<span>';
                             html += '  <label for="">Senha</label>';
-                            html += '<input type="password" >'; 
+                            html += '<input type="password" >';
                         html += '</span>';
                         html += '<span>';
                             html += '  <label for="">Confirme sua senha</label>';
-                            html += '<input type="password" >'; 
+                            html += '<input type="password" >';
                         html += '</span>';
                     html += '</div>';
                     html += '<div class="column">';
@@ -312,7 +312,7 @@ function modalOpen(e, post){
                     html += '    <span class="custom-select">';
                     html += '        <select class="estados" name="">';
                     html += '        </select>';
-                    html += '    </span> '; 
+                    html += '    </span> ';
                     html += '  </span>';
                     html += '</span>';
                     html += '<span class="numero-complemento -telefone">';
@@ -328,7 +328,7 @@ function modalOpen(e, post){
                     html += '<span>';
                     html += '    <button class="btn btn-1 -action"><span>Finalizar cadastro</span> <i class="fa fa-angle-right"></i></button>';
                     html += '</span>';
-                    html += '</div>'; 
+                    html += '</div>';
                     html += '</form>'
                     html += '</div>';
                 html += '</div>', modal.addClass("-cadastro").children().css("max-width", 806);
@@ -344,42 +344,50 @@ function modalOpen(e, post){
 }
 $(document).mouseup(function (e){
     var container = $(".envelope-anchor, .envelope-nav");
-    if (!container.is(e.target) 
-    && container.has(e.target).length === 0) 
+    if (!container.is(e.target)
+    && container.has(e.target).length === 0)
     {
         $(".-on").removeClass("-on")
     }
 });
+$(document).mouseup(function (e){
+    var container = $(".modal-inner");
+    if (!container.is(e.target)
+    && container.has(e.target).length === 0)
+    {
+        modalClose(container);
+    }
+});
 $(window).on("resize", function () {
-    $(".-on").removeClass("-on");      
+    $(".-on").removeClass("-on");
 });
 // $.getJSON('estados_cidades.json', function (data) {
 //     var items = [];
-//     var options = '<option value="">Escolha um estado</option>';    
+//     var options = '<option value="">Escolha um estado</option>';
 //     $.each(data, function (key, val) {
 //         options += '<option value="' + val.nome + '">' + val.nome + '</option>';
-//     });                 
-//     $(".estados").html(options);                
-    
-//     $(".estados").change(function () {              
-    
+//     });
+//     $(".estados").html(options);
+
+//     $(".estados").change(function () {
+
 //         var options_cidades = '';
-//         var str = "";                   
-        
+//         var str = "";
+
 //         $(".estados option:selected").each(function () {
 //             str += $(this).text();
 //         });
-        
+
 //         $.each(data, function (key, val) {
-//             if(val.nome == str) {                           
+//             if(val.nome == str) {
 //                 $.each(val.cidades, function (key_city, val_city) {
 //                     options_cidades += '<option value="' + val_city + '">' + val_city + '</option>';
-//                 });                         
+//                 });
 //             }
 //         });
 //         $(this).closest("form").find(".cidades").html(options_cidades);
-        
-//     }).change();        
+
+//     }).change();
 
 // });
 // Autocomplete CEP
@@ -389,7 +397,7 @@ $(window).on("resize", function () {
 //     $(".bairro").val("");
 //     $(".cidade").val("");
 //     $(".uf").val("");
-// }   
+// }
 // $( ".cep" ).each(function() {
 //     $(this).blur(function() {
 //         //Nova variável "cep" somente com dígitos.
@@ -419,8 +427,6 @@ $(window).on("resize", function () {
 //                         $(this).closest($("form")).find(".bairro").val(dados.bairro);
 //                         $(this).closest($("form")).find(".cidade").val(dados.localidade);
 //                         $(this).closest($("form")).find(".uf").val(dados.uf);
-//                         console.log(dados);
-//                     } //end if.
 //                     else {
 //                         //CEP pesquisado não foi encontrado.
 //                         limpa_formulário_cep();
@@ -438,7 +444,7 @@ $(window).on("resize", function () {
 //             //cep sem valor, limpa formulário.
 //             limpa_formulário_cep();
 //         }
-//     });   
+//     });
 // });
 function rating(){
     $(".rating-stars").find("input").each(function ( index ) {
@@ -450,12 +456,33 @@ function rating(){
         });
     });
 }
+
 $(document).ready(function () {
     $('.owl-slideshow:not(.tab-slide)').owlCarousel({
         items: 1,
         nav: true,
         dots: true,
         navText: ["<i class='owl-prev-arrow'><img src='assets/imgs/thin-arrow.png'/></i>","<i class='owl-next-arrow'><img src='assets/imgs/thin-arrow.png'/></i>"]
+    });
+    $('.owl-carousel.porque-slider').owlCarousel({
+        loop: false,
+        margin: 70,
+        nav: true,
+        navText: ["<i class='owl-prev-arrow fa fa-angle-left'></i>","<i class='owl-next-arrow fa fa-angle-right'></i>"],
+        responsive:{
+            0:{
+                items: 1
+            },
+            736:{
+                items: 2
+            },
+            990:{
+                items: 3
+            },
+            1280:{
+                items: 4
+            }
+        }
     });
     $('.owl-slideshow.tab-slide').owlCarousel({
         items: 1,
@@ -481,6 +508,15 @@ $(document).ready(function () {
     $("[name*='qti_choice']").click(function() {
         $(this).closest("ul").find("#randomQti").val("")
     });
+    if($(".side-navigation").length)
+        var el = $(".side-navigation"),
+            page = $('body').attr('class').split(" ")[0];
+
+        $('.side-navigation li[class]').each(function ea(){
+            for (var i = 0; i < el.children().length; i++) {
+                if($(this).attr("class") == page)
+                    $(this).addClass("-active")
+            }
+        });
 });
-      
-      
+
