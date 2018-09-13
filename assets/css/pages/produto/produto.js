@@ -6,8 +6,10 @@ $(document).ready(function () {
             var tabs = $(".tabs"),
                 sidebar = $(".config-sidebar"),
                 edges = sidebar.closest(".container").offset().left,
+                footer = $("footer").offset().top,
+                limit = st + sidebar.outerHeight(),                
                 offset = tabs.offset().top + $(".header").outerHeight();
-            if(st > offset && sidebar.closest(".tab").is(".-active") && $(window).width() >= 1336){
+            if(st > offset && sidebar.closest(".tab").is(".-active") && $(window).width() >= 1336 && limit < footer){
                 if(!tabs.is(".sticky"))
                     tabs.addClass("sticky")
                     .find(sidebar).css("right", edges + 104)

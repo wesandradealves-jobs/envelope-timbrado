@@ -30,14 +30,14 @@ function showDetails(e){
     e.closest(".order-list-item").toggleClass("-toggle")
     .find(".order-list-details").toggle();
 
-    e.find(".fa-angle-down").toggleClass("fa-angle-up");
+    e.find("[class*='angle-']").toggleClass("fa-angle-down").toggleClass("fa-angle-up");
 }
 function showAddress(e){
     var e = $(e);
     e.closest(".address-item").toggleClass("-toggle")
     .find(".addres-item-details").toggleClass("-toggle");
 
-    e.find(".fa-angle-down").toggleClass("fa-angle-up");
+    e.find("[class*='angle-']").toggleClass("fa-angle-down").toggleClass("fa-angle-up");
 }
 function checkBlur(){
     if($("body .modal.-toggle").length){
