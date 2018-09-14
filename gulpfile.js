@@ -104,7 +104,7 @@ gulp.task('commons', function(){
 
 // Vendors .js generator
 gulp.task('vendors', function() {
-  return gulp.src(['node_modules/jquery/dist/jquery.js', 'https://code.jquery.com/ui/1.12.1/jquery-ui.js', 'node_modules/owl.carousel/dist/owl.carousel.js', 'node_modules/jquery-mask-plugin/dist/jquery.mask.js'])
+  return gulp.src(['node_modules/jquery/dist/jquery.js', 'https://code.jquery.com/ui/1.12.1/jquery-ui.js', 'node_modules/owl.carousel/dist/owl.carousel.js', 'node_modules/jquery-mask-plugin/dist/jquery.mask.js', 'node_modules/magnify/dist/js/jquery.magnify.js'])
     .pipe(uglify())
     .pipe(concat('vendors.js'))
     .pipe(gulp.dest('assets/js'));

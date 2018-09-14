@@ -37,7 +37,11 @@ $(document).ready(function () {
 
 			item.toggleClass("-active");
 
-			item.closest(".gallery").find(bigImage).attr({"style" : "background-image:url("+ image +")"});
+			item.closest(".gallery").find(bigImage).children().attr({"src":image,"data-magnify-src":image.replace('.', '-large.')});
+			item.closest(".gallery").find(bigImage).find("img").attr({"src":image,"data-magnify-src":image.replace('.', '-large.')});
+			item.closest(".gallery").find(bigImage).find(".magnify-lens").attr("style", "background-image:url("+image.replace('.', '-large.')+")");
+			// item.closest(".gallery").find(bigImage).attr({"style" : "background-image:url("+ image +")"});
+			// item.closest(".gallery").find(bigImage).attr("data-magnify-src", image);
 		});
 	}), gallery.closest(".gallery").find(nav).each(function( index ) {
 		var nav = $(this),

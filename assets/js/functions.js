@@ -508,7 +508,7 @@ $(document).ready(function () {
     $("[name*='qti_choice']").click(function() {
         $(this).closest("ul").find("#randomQti").val("")
     });
-    if($(".side-navigation").length)
+    if($(".side-navigation").length){
         var el = $(".side-navigation"),
             page = $('body').attr('class').split(" ")[0];
 
@@ -518,5 +518,19 @@ $(document).ready(function () {
                     $(this).addClass("-active")
             }
         });
+    }
+    $zoom = $('.zoom').magnify({
+      afterLoad: function() {
+        console.log('Magnification powers activated!');
+      }
+    }); 
+    $('html').on({
+    magnifystart: function() {
+        console.log('\'magnifystart\' event fired');
+    },
+    magnifyend: function() {
+        console.log('\'magnifyend\' event fired');
+    }
+    });    
 });
 
