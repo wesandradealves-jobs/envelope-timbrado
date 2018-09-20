@@ -273,7 +273,7 @@
                 </li>                                        
               </ul>
               <p class="delivery-time"><small>Produção: 2 dias úteis</small></p>
-              <a class="btn btn-1" href="single.html" title="Configurar agora">Configurar agora</a>
+              <a onclick="triggerConfig(this)" class="btn btn-1" href="javascript:void(0)" title="Configurar agora">Configurar agora</a>
               <p class="topic">
                 Na próxima tela você pode configurar as especificações do seu produto e conferir o preço                
               </p>
@@ -284,8 +284,8 @@
           <div class="tabs">
             <div class="container">
               <ul class="tab-navigation">
-                <li class="-active"><a href="javascript:void(0)" title="Sobre este produto">Sobre este produto</a></li>
-                <li><a href="javascript:void(0)" title="Configure este produto">Configure este produto</a></li>
+                <li class="-active"><a id="about-product" href="javascript:void(0)" title="Sobre este produto">Sobre este produto</a></li>
+                <li><a id="product-config" href="javascript:void(0)" title="Configure este produto">Configure este produto</a></li>
               </ul>
             </div>
             <div class="tab-content">
@@ -618,7 +618,7 @@
                           </li>
                           <li class="qti_choice -random_choice">
                             <label>
-                              <input id="randomQti" type="number" placeholder="Digite" />
+                              <input id="randomQti" type="text" value="1" />
                               <h2><small>a quantidade desejada*</small></h2>
                               <p>R$ 0,00 cada <small>*múltiplos de 500</small></p>
                             </label>

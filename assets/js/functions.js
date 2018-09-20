@@ -9,6 +9,9 @@ function execmascara(){
 function soLetras(v){
     return v.replace(/\d/g,"") //Remove tudo o que não é Letra
 }
+function soNumeros(v){
+    return v.replace(/[^\d]+/g,'').replace(/[' ']/g,'').replace(/\b0\b/g,'1')
+}
 function sendWPP(e){
     var e = $(e);
     // var telefone = "5521997983711";
@@ -456,7 +459,9 @@ function rating(){
         });
     });
 }
-
+function triggerConfig(e){
+    $( "#product-config" ).trigger( "click" );
+}
 $(document).ready(function () {
     $('.owl-slideshow:not(.tab-slide)').owlCarousel({
         items: 1,
@@ -532,5 +537,8 @@ $(document).ready(function () {
         console.log('\'magnifyend\' event fired');
     }
     });    
+    $( "#randomQti" ).on('keypress blur', function(e) {
+        mascara(this,soNumeros)
+    });        
 });
 
