@@ -461,6 +461,7 @@ function rating(){
 }
 function triggerConfig(e){
     $( "#product-config" ).trigger( "click" );
+    $('html, body').animate({scrollTop: $(".product-details").offset().top}, 2000);
 }
 $(document).ready(function () {
     $('.owl-slideshow:not(.tab-slide)').owlCarousel({

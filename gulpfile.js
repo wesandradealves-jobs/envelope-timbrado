@@ -39,6 +39,7 @@ gulp.task('sass', function() {
     gulp.src(sassfiles)
         .pipe(sass().on('error', sass.logError))
         .pipe(cleanCSS({
+            minify: false,
             compatibility: 'ie8',
             level: {
                 1: {
